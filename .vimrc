@@ -23,6 +23,8 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'xuhdev/vim-latex-live-preview'
 
+Plug 'tpope/vim-surround' 
+
 call plug#end()
 
 
