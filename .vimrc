@@ -1,4 +1,3 @@
-set clipboard=unnamedplus
 set encoding=utf8 
 set laststatus=2
 set number
