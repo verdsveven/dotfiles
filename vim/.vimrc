@@ -25,6 +25,8 @@ Plug 'xuhdev/vim-latex-live-preview'
 
 Plug 'tpope/vim-surround' 
 
+Plug 'scrooloose/nerdtree'
+
 call plug#end()
 
 
