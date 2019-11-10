@@ -25,8 +25,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'xuhdev/vim-latex-live-preview'
-
 Plug 'tpope/vim-surround' 
 
 Plug 'scrooloose/nerdtree'
@@ -34,5 +32,5 @@ Plug 'scrooloose/nerdtree'
 call plug#end()
 
 
-autocmd FileType tex :map! <f5> <esc> :LLPStartPreview
-autocmd FileType tex :map <f5> <esc> :LLPStartPreview <CR>
+autocmd FileType tex :map! <f5> <esc> \o
+autocmd FileType tex :map <f5> <esc> \o 
