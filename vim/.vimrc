@@ -31,6 +31,5 @@ Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
-
-autocmd FileType tex :map! <f5> <esc> \o
-autocmd FileType tex :map <f5> <esc> \o 
+map <f5> :! pdflatex %<CR><CR> 
+map S :! xdg-open %<.pdf<CR><CR> & disown<CR><CR><CR>
