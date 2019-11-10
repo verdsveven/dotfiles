@@ -32,4 +32,4 @@ Plug 'scrooloose/nerdtree'
 call plug#end()
 
 map <f5> :! pdflatex %<CR><CR> 
-map S :! xdg-open %<.pdf<CR><CR> & disown<CR><CR><CR>
+map S :! xdg-open %<.pdf<CR><CR> & disown<CR><CR>
