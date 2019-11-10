@@ -19,7 +19,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf'
 
-Plug 'itchyny/lightline.vim'
+Plug 'bling/vim-airline'
 
 Plug 'jiangmiao/auto-pairs'
 
