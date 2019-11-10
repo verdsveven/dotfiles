@@ -21,6 +21,8 @@ Plug 'junegunn/fzf'
 
 Plug 'bling/vim-airline'
 
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'xuhdev/vim-latex-live-preview'
