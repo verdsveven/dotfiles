@@ -26,13 +26,13 @@ Plug 'bling/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'jiangmiao/auto-pairs'
-
 Plug 'tpope/vim-surround' 
 
 Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
+map <f6> :FZF
+map! <f6> <esc>:FZF
 autocmd FileType tex map <f5> :w<CR> :lcd %:p:h<CR> :! pdflatex %<CR><CR> 
 autocmd FileType tex map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! pdflatex %<CR><CR> 
