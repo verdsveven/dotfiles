@@ -2,9 +2,12 @@ set encoding=utf8
 set laststatus=2
 set number
 set lbr
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set hlsearch
 set incsearch
+set nocompatible
+set display+=lastline
+set wrap
 filetype on
 
 
@@ -31,5 +34,5 @@ Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
-map <f5> :! pdflatex %<CR><CR> 
-map S :! xdg-open %<.pdf<CR><CR> & disown<CR><CR>
+autocmd FileType tex map <f5> :w<CR> :lcd %:p:h<CR> :! pdflatex %<CR><CR> 
+autocmd FileType tex map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! pdflatex %<CR><CR> 
