@@ -3,7 +3,6 @@ set laststatus=2
 set number
 set lbr
 set clipboard+=unnamedplus
-set hlsearch
 set incsearch
 set nocompatible
 set display+=lastline
