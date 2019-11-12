@@ -33,5 +33,5 @@ call plug#end()
 
 map <f6> :FZF
 map! <f6> <esc>:FZF
-autocmd FileType tex map <f5> :w<CR> :lcd %:p:h<CR> :! pdflatex %<CR><CR> 
-autocmd FileType tex map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! pdflatex %<CR><CR> 
+autocmd FileType tex map <f5> :w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR> 
+autocmd FileType tex map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR>
