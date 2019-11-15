@@ -27,6 +27,8 @@ Plug 'tpope/vim-surround'
 
 Plug 'scrooloose/nerdtree'
 
+Plug 'sirver/ultisnips'
+
 call plug#end()
 
 map <f6> :FZF
