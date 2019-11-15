@@ -2,7 +2,7 @@ set encoding=utf8
 set laststatus=2
 set number
 set lbr
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 set incsearch
 set nocompatible
 set display+=lastline
