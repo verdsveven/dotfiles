@@ -21,7 +21,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf'
 
-Plug 'powerline/powerline'
+Plug 'itchyny/lightline.vim'
 
 Plug 'tpope/vim-surround' 
 
