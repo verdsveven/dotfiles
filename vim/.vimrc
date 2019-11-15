@@ -21,9 +21,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf'
 
-Plug 'bling/vim-airline'
-
-Plug 'vim-airline/vim-airline-themes'
+Plug 'powerline/powerline'
 
 Plug 'tpope/vim-surround' 
 
