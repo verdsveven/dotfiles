@@ -1,3 +1,13 @@
+"Welcome to my .vimrc!
+
+"Below are all the set commands
+"These include:
+"Setting encoding to utf-8
+"Setting vim to have numbers for lines on the side
+"Setting linebreak so that vim doesn't break apart words
+"Setting clipboard to the register
+"Setting filetype plugin on (very important!)
+
 set encoding=utf8 
 set laststatus=2
 set number
@@ -9,13 +19,15 @@ set display+=lastline
 set wrap
 filetype on
 
-
+"A script to download and install vim-plug if it is not already installed:
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
+"My plugins using vim-plug 
 
 call plug#begin('~/.vim/plugged')
 
@@ -29,7 +41,15 @@ Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
-map <f6> :FZF
-map! <f6> <esc>:FZF
+
+"My vim mappings below
+
+"Mapping for fuzzy search (set to the home directory):
+map <f6> :FZF ~/<CR>
+map! <f6> <esc>:FZF ~/<CR>
+
+"Mappings for LaTeX compilation and opening with zathura:
 autocmd FileType tex map <f5> :w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR> 
 autocmd FileType tex map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR>
+autocmd FileType tex map <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR> 
+autocmd FileType tex map! <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR> 
