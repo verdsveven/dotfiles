@@ -41,6 +41,8 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'sirver/ultisnips'
 
+Plug 'dylanaraps/wal.vim'
+
 call plug#end()
 
 
@@ -59,3 +61,5 @@ autocmd FileType tex map! <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR>
 "Mappings for loading of .Xresources upon pressing f5:
 autocmd FileType xdefaults map <f5> :w<CR> :lcd %:p:h<CR> :! xrdb ~/.Xresources<CR><CR>
 autocmd FileType xdefaults map! <f5> :w<CR> :lcd %:p:h<CR> :! xrdb ~/.Xresources<CR><CR> 
+
+colorscheme wal 
