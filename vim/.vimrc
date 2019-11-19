@@ -53,7 +53,7 @@ map <f6> :FZF ~/<CR>
 map! <f6> <esc>:FZF ~/<CR>
 
 "Mappings for LaTeX compilation and opening with zathura:
-autocmd FileType tex map <f5> :w latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR> 
+autocmd FileType tex map <f5> :w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR> 
 autocmd FileType tex map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR>
 autocmd FileType tex map <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR> 
 autocmd FileType tex map! <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR> 
