@@ -33,15 +33,19 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf'
 
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 
 Plug 'tpope/vim-surround' 
+
+Plug 'tpope/vim-fugitive'
 
 Plug 'scrooloose/nerdtree'
 
 Plug 'sirver/ultisnips'
 
 Plug 'dylanaraps/wal.vim'
+
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -58,8 +62,13 @@ autocmd FileType tex map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! 
 autocmd FileType tex map <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR> 
 autocmd FileType tex map! <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR> 
 
+autocmd FileType markdown map <f5> :w<CR> :lcd %:p:h<CR> :! Rscript ~/Documents/Markdown/render.r<CR><CR>
+autocmd FileType markdown map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! Rscript ~/Documents/Markdown/render.r<CR><CR>
+
 "Mappings for loading of .Xresources upon pressing f5:
 autocmd FileType xdefaults map <f5> :w<CR> :lcd %:p:h<CR> :! xrdb ~/.Xresources<CR><CR>
 autocmd FileType xdefaults map! <f5> :w<CR> :lcd %:p:h<CR> :! xrdb ~/.Xresources<CR><CR> 
 
-colorscheme wal 
+let g:airline_powerline_fonts = 1
+let g:airline_theme='luna'
+let g:airline#extensions#tabline#enabled = 1
