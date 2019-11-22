@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-exec picom & 
-
 wal -R 
+
+exec picom & 
 
 amixer set Master 0
 
