@@ -1,6 +1,7 @@
 "Welcome to my .vimrc!
 
 "Below are all the set commands
+"Essentially the main declarations needed
 "These include:
 "Setting encoding to utf-8
 "Setting vim to have numbers for lines on the side
