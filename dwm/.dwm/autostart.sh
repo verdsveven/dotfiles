@@ -2,7 +2,7 @@
 
 wal -R & 
 
-picom --config ~/.config/picom/picom.conf &
+picom &
 
 amixer set Master 0 &
 
