@@ -1,5 +1,4 @@
-Xft.dpi: 96 
 *font: Inconsolata-16
-*.alpha: 0.98 
+*.alpha: 0.95 
 
 #include "/home/lukasz/.cache/wal/colors.Xresources"

@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
-wal -R 
+wal -R & 
 
-exec picom & 
+picom --config ~/.config/picom/picom.conf &
 
-amixer set Master 0
+amixer set Master 0 &
 
 status() { \
 	echo "|";
@@ -22,4 +22,4 @@ update() { \
 while true; do
 	update
 	sleep 1s
-done & disown 
+done & 
