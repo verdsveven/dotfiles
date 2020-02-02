@@ -58,14 +58,17 @@ map <f6> :FZF ~/<CR>
 map! <f6> <esc>:FZF ~/<CR>
 
 "Mappings for LaTeX compilation and opening with zathura:
-autocmd FileType tex map <f5> :w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR> 
+autocmd FileType tex map <f5> :w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR>
 autocmd FileType tex map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR>
-autocmd FileType tex map <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR> 
-autocmd FileType tex map! <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR> 
+autocmd FileType tex map <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR>
+autocmd FileType tex map! <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR>
 
-"Mappings for R Markdown compilation:
-autocmd FileType markdown map <f5> :w<CR> :lcd %:p:h<CR> :! R -e "rmarkdown::render('%', 'pdf_document', output_file='%.pdf')"<CR><CR>
-autocmd FileType markdown map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! R -e "rmarkdown::render('%', 'pdf_document', output_file='%.pdf')"<CR><CR>
+"Mappings for R Markdown compilation and opening with zathura:
+autocmd FileType markdown map <f5> :w<CR> :lcd %:p:h<CR> :! R -e "rmarkdown::render('%', 'pdf_document', output_file='%<.pdf')"<CR><CR>
+autocmd FileType markdown map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! R -e "rmarkdown::render('%', 'pdf_document', output_file='%<.pdf')"<CR><CR>
+autocmd FileType markdown map <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR>
+autocmd FileType markdown map! <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR>
+t
 
 "Mappings for loading of .Xresources upon pressing f5:
 autocmd FileType xdefaults map <f5> :w<CR> :lcd %:p:h<CR> :! xrdb ~/.Xresources<CR><CR>
