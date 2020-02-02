@@ -66,8 +66,8 @@ autocmd FileType tex map! <f4> <esc>:lcd %:p:h<CR> :! zathura %<.pdf & disown<CR
 "Mappings for R Markdown compilation and opening with zathura:
 autocmd FileType markdown map <f5> :w<CR> :lcd %:p:h<CR> :! R -e "rmarkdown::render('%', 'pdf_document', output_file='%<.pdf')"<CR><CR>
 autocmd FileType markdown map! <f5> <esc>:w<CR> :lcd %:p:h<CR> :! R -e "rmarkdown::render('%', 'pdf_document', output_file='%<.pdf')"<CR><CR>
-autocmd FileType markdown map <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR>
-autocmd FileType markdown map! <f4> <esc>:lcd %:p:h<CR> :! zathura %<.pdf & disown<CR>
+autocmd FileType markdown map <f4> :lcd %:p:h<CR><CR> :! zathura %<.pdf & disown<CR><CR>
+autocmd FileType markdown map! <f4> <esc>:lcd %:p:h<CR><CR> :! zathura %<.pdf & disown<CR><CR>
 
 "Mappings for loading of .Xresources upon pressing f5:
 autocmd FileType xdefaults map <f5> :w<CR> :lcd %:p:h<CR> :! xrdb ~/.Xresources<CR><CR>
