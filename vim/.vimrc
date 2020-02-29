@@ -6,7 +6,7 @@
 "Setting encoding to utf-8
 "Setting vim to have numbers for lines on the side
 "Setting linebreak so that vim doesn't break apart words
-"Setting clipboard to the register
+"Setting clipboard to the + register
 "Setting filetype plugin on (very important!)
 
 set encoding=utf8 
@@ -57,17 +57,18 @@ call plug#end()
 map <f6> :FZF ~/<CR>
 map! <f6> <esc>:FZF ~/<CR>
 
-"Mappings for LaTeX compilation and opening with zathura:
+"Mappings for LaTeX compilation and subsequent opening of created pdf with zathura:
 autocmd FileType tex map <f5> :w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR>
 autocmd FileType tex map! <f5> <esc><esc>:w<CR> :lcd %:p:h<CR> :! latex %<CR><CR> :! biber %<<CR><CR> :! pdflatex %<CR><CR>
 autocmd FileType tex map <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR><CR>
 autocmd FileType tex map! <f4> <esc><esc>:lcd %:p:h<CR> :! zathura %<.pdf & disown<CR><CR>
 
-"Mappings for R Markdown compilation and opening with zathura:
-autocmd FileType markdown map <f5> :w<CR> :lcd %:p:h<CR> :! R -e "rmarkdown::render('%', 'pdf_document', output_file='%<.pdf')"<CR><CR>
-autocmd FileType markdown map! <f5> <esc><esc>:w<CR> :lcd %:p:h<CR> :! R -e "rmarkdown::render('%', 'pdf_document', output_file='%<.pdf')"<CR><CR>
-autocmd FileType markdown map <f4> :lcd %:p:h<CR> :! zathura %<.pdf & disown<CR><CR>
-autocmd FileType markdown map! <f4> <esc><esc>:lcd %:p:h<CR> :! zathura %<.pdf & disown<CR><CR>
+"Mappings for pandoc Markdown compilation and opening of created pdf with zathura:
+"You will essentially be asked for output format (as an extension: i.e.: pdf, tex, docx, etc.)
+autocmd FileType markdown map <f5> :w<CR> :lcd %:p:h<CR> :!pandoc % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
+autocmd FileType markdown map! <f5> <esc><esc>:w<CR> :lcd %:p:h<CR> :!pandoc % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
+autocmd FileType markdown map <f4> :lcd %:p:h<CR> :!zathura %<.pdf & disown<CR><CR>
+autocmd FileType markdown map! <f4> <esc><esc>:lcd %:p:h<CR> :!zathura %<.pdf & disown<CR><CR>
 
 "Mappings for loading of .Xresources upon pressing f5:
 autocmd FileType xdefaults map <f5> :w<CR><CR> :lcd %:p:h<CR><CR> :! xrdb ~/.Xresources<CR><CR>
