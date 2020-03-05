@@ -65,14 +65,14 @@ autocmd FileType tex map! <f4> <esc><esc>:lcd %:p:h<CR>:!zathura %<.pdf & disown
 
 "Mappings for pandoc Markdown compilation and opening of created pdf with zathura:
 "You will essentially be asked for output format (as an extension: i.e.: pdf, tex, docx, etc.)
-autocmd FileType markdown map <f5> :w<CR>:lcd %:p:h<CR>:!pandoc % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
-autocmd FileType markdown map! <f5> <esc>:w<CR>:lcd %:p:h<CR>:!pandoc % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
+autocmd FileType markdown map <f5> :w<CR>:lcd %:p:h<CR>:!pandoc -s % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
+autocmd FileType markdown map! <f5> <esc>:w<CR>:lcd %:p:h<CR>:!pandoc -s % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
 autocmd FileType markdown map <f4> :lcd %:p:h<CR>:!zathura %<.pdf & disown<CR><CR>
 autocmd FileType markdown map! <f4> <esc>:lcd %:p:h<CR>:!zathura %<.pdf & disown<CR><CR>
 
 "Mappings for loading of .Xresources upon pressing f5:
-autocmd FileType xdefaults map <f5> :w<CR><CR> :lcd %:p:h<CR><CR> :! xrdb ~/.Xresources<CR><CR>
-autocmd FileType xdefaults map! <f5> <esc><esc>:w<CR><CR> :lcd %:p:h<CR><CR> :! xrdb ~/.Xresources<CR><CR> 
+autocmd FileType xdefaults map <f5> :w<CR><CR>:lcd %:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR>
+autocmd FileType xdefaults map! <f5> <esc><esc>:w<CR><CR>:lcd %:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR> 
 
 "Airline settings:
 let g:airline_powerline_fonts = 1
