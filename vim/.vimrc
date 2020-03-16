@@ -57,8 +57,8 @@ call plug#end()
 "My vim mappings below
 
 "Mapping for fuzzy file search a.k.a. fzf (set to the home directory):
-map <f6> :FZF ~/<CR>
-map! <f6> <esc>:FZF ~/<CR>
+map <f6> :FZF $HOME/<CR>
+map! <f6> <esc>:FZF $HOME/<CR>
 
 "Mappings for LaTeX compilation and subsequent opening of created pdf with zathura:
 autocmd FileType tex map <f5> :w<CR>:lcd %:p:h<CR>:!latex %<CR><CR>:!biber %<<CR><CR>:!pdflatex %<CR><CR>
