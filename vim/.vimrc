@@ -20,7 +20,8 @@ set display+=lastline
 set wrap
 filetype on
 
-"Other basic declarations
+"Other basic declarations:
+"The FZF search default command:
 let $FZF_DEFAULT_COMMAND = 'find -L'
 
 "A script to download and install vim-plug if it is not already installed:
