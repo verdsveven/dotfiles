@@ -20,6 +20,9 @@ set display+=lastline
 set wrap
 filetype on
 
+"Other basic declarations
+let $FZF_DEFAULT_COMMAND = 'find -L'
+
 "A script to download and install vim-plug if it is not already installed:
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -53,7 +56,7 @@ call plug#end()
 
 "My vim mappings below
 
-"Mapping for fuzzy search (set to the home directory):
+"Mapping for fuzzy file search a.k.a. fzf (set to the home directory):
 map <f6> :FZF ~/<CR>
 map! <f6> <esc>:FZF ~/<CR>
 
@@ -69,6 +72,12 @@ autocmd FileType markdown map <f5> :w<CR>:lcd %:p:h<CR>:!pandoc -s % -f markdown
 autocmd FileType markdown map! <f5> <esc>:w<CR>:lcd %:p:h<CR>:!pandoc -s % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
 autocmd FileType markdown map <f4> :lcd %:p:h<CR>:!zathura %<.pdf & disown<CR><CR>
 autocmd FileType markdown map! <f4> <esc>:lcd %:p:h<CR>:!zathura %<.pdf & disown<CR><CR>
+
+"Mappings for lilypond sheet music compilation and subsequent opening of created pdf with zathura:
+autocmd FileType lilypond map <f5> :w<CR>:lcd %:p:h<CR>:!lilypond %<CR><CR>
+autocmd FileType lilypond map! <f5> <esc>:w<CR>:lcd %:p:h<CR>:!lilypond %<CR><CR>
+autocmd FileType lilypond map <f3> :lcd %:p:h<CR>:!zathura %<.pdf & disown<CR><CR>
+autocmd FileType lilypond map! <f3> <esc>:lcd %:p:h<CR>:!zathura %<.pdf & disown<CR><CR>
 
 "Mappings for loading of .Xresources upon pressing f5:
 autocmd FileType xdefaults map <f5> :w<CR><CR>:lcd %:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR>
