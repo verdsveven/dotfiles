@@ -46,8 +46,6 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'scrooloose/nerdtree'
 
-Plug 'sirver/ultisnips'
-
 Plug 'dylanaraps/wal.vim'
 
 Plug 'vim-airline/vim-airline-themes'
