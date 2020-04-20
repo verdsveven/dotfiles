@@ -20,6 +20,7 @@ set nocompatible
 set display+=lastline
 set wrap
 filetype on
+set wildmenu
 
 "Other basic declarations:
 "The FZF search default command:
