@@ -15,6 +15,7 @@ set number
 set lbr
 set clipboard=unnamedplus
 set incsearch
+set nohlsearch
 set nocompatible
 set display+=lastline
 set wrap
