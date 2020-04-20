@@ -89,4 +89,4 @@ let g:airline_theme='monochrome'
 let g:airline#extensions#tabline#enabled = 1
 
 "My colourscheme
-colo ron
+colo elflord
