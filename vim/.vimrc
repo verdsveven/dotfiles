@@ -21,6 +21,7 @@ set display+=lastline
 set wrap
 filetype on
 set wildmenu
+set path+=**
 
 "Other basic declarations:
 "The FZF search default command:
