@@ -22,6 +22,7 @@ set wrap
 filetype on
 set wildmenu
 set path+=**
+set nu rnu
 
 "Other basic declarations:
 "The FZF search default command:
