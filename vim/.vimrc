@@ -80,7 +80,6 @@ autocmd FileType xdefaults map <f5> :w<CR><CR>:lcd %:p:h<CR><CR>:!xrdb ~/.Xresou
 autocmd FileType xdefaults map! <f5> <esc><esc>:w<CR><CR>:lcd %:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR> 
 
 "Airline settings:
-let g:airline_powerline_fonts = 1
 let g:airline_theme='monochrome'
 let g:airline#extensions#tabline#enabled = 1
 
