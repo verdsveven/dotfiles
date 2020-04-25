@@ -24,10 +24,6 @@ set wildmenu
 set path+=**
 set nu rnu
 
-"Other basic declarations:
-"The FZF search default command:
-let $FZF_DEFAULT_COMMAND = 'find -L'
-
 "A script to download and install vim-plug if it is not already installed:
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -35,12 +31,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
 "My plugins using vim-plug 
 
 call plug#begin('~/.vim/plugged')
-
-Plug 'junegunn/fzf'
 
 Plug 'vim-airline/vim-airline'
 
@@ -59,9 +52,10 @@ call plug#end()
 
 "My vim mappings below
 
-"Mapping for fuzzy file search a.k.a. fzf (set to the home directory):
-map <f6> :FZF $HOME/<CR>
-map! <f6> <esc>:FZF $HOME/<CR>
+"Mapping for file search with vim's built in :find command (add set path variable as in the beginning for recursive search):
+"Simply start typing and press tab for auto-completion e.g. Docume <Tab> completes to Documents, etc.
+map <f6> :find 
+map! <f6> <esc>:find 
 
 "Mappings for opening LaTeX, Markdown and LilyPond pdf outputs in zathura:
 autocmd FileType tex,markdown,lilypond map <f4> :!zathura %<.pdf & disown<CR><CR>
