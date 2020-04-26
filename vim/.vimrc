@@ -9,7 +9,7 @@
 "Setting clipboard to the + register
 "Setting filetype plugin on (very important!)
 
-set encoding=utf8 
+set encoding=utf-8
 set laststatus=2
 set number
 set lbr
@@ -31,13 +31,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-"My plugins using vim-plug 
+"My plugins using vim-plug
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 
-Plug 'tpope/vim-surround' 
+Plug 'tpope/vim-surround'
 
 Plug 'tpope/vim-fugitive'
 
