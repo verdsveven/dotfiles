@@ -1,4 +1,4 @@
 *font: Inconsolata-16
-*.alpha: 0.95 
+*.alpha: 0.95
 
 #include "/home/lukasz/.cache/wal/colors.Xresources"
