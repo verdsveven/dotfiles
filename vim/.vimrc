@@ -62,22 +62,22 @@ autocmd FileType tex,markdown,lilypond map <f4> :!zathura %<.pdf & disown<CR><CR
 autocmd FileType tex,markdown,lilypond map! <f4> <esc><esc>:!zathura %<.pdf & disown<CR><CR>
 
 "Mappings for LaTeX compilation and subsequent opening of created pdf with zathura:
-autocmd FileType tex map <f5> :w<CR>:lcd %:p:h<CR>:!latex %<CR><CR>:!biber %<<CR><CR>:!pdflatex %<CR><CR>
-autocmd FileType tex map! <f5> <esc><esc>:w<CR>:lcd %:p:h<CR>:!latex %<CR><CR>:!biber %<<CR><CR>:!pdflatex %<CR><CR>
+autocmd FileType tex map <f5> :w<CR>:lcd%:p:h<CR>:!latex %<CR><CR>:!biber %<<CR><CR>:!pdflatex %<CR><CR>
+autocmd FileType tex map! <f5> <esc><esc>:w<CR>:lcd%:p:h<CR>:!latex %<CR><CR>:!biber %<<CR><CR>:!pdflatex %<CR><CR>
 
 "Mappings for pandoc Markdown compilation:
 "You will essentially be asked for output format (as an extension: i.e.: pdf, tex, docx, etc.)
-autocmd FileType markdown map <f5> :w<CR>:lcd %:p:h<CR>:!pandoc -s % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
-autocmd FileType markdown map! <f5> <esc>:w<CR>:lcd %:p:h<CR>:!pandoc -s % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
+autocmd FileType markdown map <f5> :w<CR>:lcd%:p:h<CR>:!pandoc -s % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
+autocmd FileType markdown map! <f5> <esc>:w<CR>:lcd%:p:h<CR>:!pandoc -s % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
 
 "Mappings for lilypond sheet music compilation:
 autocmd FileType lilypond mapclear <buffer>
-autocmd FileType lilypond map <f5> :w<CR>:lcd %:p:h<CR>:!lilypond %<CR><CR>
-autocmd FileType lilypond map! <f5> <esc>:w<CR>:lcd %:p:h<CR>:!lilypond %<CR><CR>
+autocmd FileType lilypond map <f5> :w<CR>:lcd%:p:h<CR>:!lilypond %<CR><CR>
+autocmd FileType lilypond map! <f5> <esc>:w<CR>:lcd%:p:h<CR>:!lilypond %<CR><CR>
 
 "Mappings for loading of .Xresources upon pressing f5:
-autocmd FileType xdefaults map <f5> :w<CR><CR>:lcd %:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR>
-autocmd FileType xdefaults map! <f5> <esc><esc>:w<CR><CR>:lcd %:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR> 
+autocmd FileType xdefaults map <f5> :w<CR><CR>:lcd%:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR>
+autocmd FileType xdefaults map! <f5> <esc><esc>:w<CR><CR>:lcd%:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR> 
 
 "Airline settings:
 let g:airline_theme='wal'
