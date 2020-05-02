@@ -2,3 +2,5 @@
 *.alpha: 0.95
 
 #include "/home/lukasz/.cache/wal/colors.Xresources"
+
+dmenu.font: Liberation Mono-10
