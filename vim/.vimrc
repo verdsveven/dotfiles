@@ -24,6 +24,7 @@ set wildmenu
 set path+=**
 set nu rnu
 set autoindent
+set hidden
 
 "A script to download and install vim-plug if it is not already installed:
 if empty(glob('~/.vim/autoload/plug.vim'))
