@@ -49,6 +49,8 @@ Plug 'dylanaraps/wal.vim'
 
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 
