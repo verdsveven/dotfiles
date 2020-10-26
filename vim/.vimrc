@@ -62,12 +62,12 @@ map <f6> :find
 map! <f6> <esc>:find 
 
 "Mappings for opening LaTeX, Markdown and LilyPond pdf outputs in zathura:
-autocmd FileType tex,markdown,lilypond map <f4> :!zathura --fork %<.pdf & disown<CR><CR>
-autocmd FileType tex,markdown,lilypond map! <f4> <esc><esc>:!zathura --fork %<.pdf & disown<CR><CR>
+autocmd FileType tex,markdown,lilypond map <f4> :!zathura --fork %<.pdf<CR><CR>
+autocmd FileType tex,markdown,lilypond map! <f4> <esc><esc>:!zathura --fork %<.pdf<CR><CR>
 
 "Mappings for LaTeX compilation and subsequent opening of created pdf with zathura:
-autocmd FileType tex map <f5> :w<CR>:lcd%:p:h<CR>:!latex %<CR><CR>:!biber %<<CR><CR>:!pdflatex %<CR><CR>
-autocmd FileType tex map! <f5> <esc><esc>:w<CR>:lcd%:p:h<CR>:!latex %<CR><CR>:!biber %<<CR><CR>:!pdflatex %<CR><CR>
+autocmd FileType tex map <f5> :w<CR>:!latexmk -pdf -cd --shell-escape %<CR><CR>
+autocmd FileType tex map! <f5> <esc><esc>:w<CR>:!latexmk -pdf -cd --shell-escape %<CR><CR>
 
 "Mappings for pandoc Markdown compilation:
 "You will essentially be asked for output format (as an extension: i.e.: pdf, tex, docx, etc.)
