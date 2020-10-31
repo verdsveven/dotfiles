@@ -50,6 +50,14 @@ call plug#end()
 "A command to open the current document's pdf in zathura:
 command ReadPDF :silent !zathura --fork %<.pdf
 
+"Commands to compile markup
+"LaTeX compilation:
+autocmd FileType tex command CompMarkup normal! :w<CR>:!latexmk -pdf -cd --shell-escape %<CR><CR>
+"Markdown compilation (asks for output format as an extension: i.e.: pdf, tex, docx, etc.):
+autocmd FileType markdown command CompMarkup exe 'normal!:w<CR>:lcd%:p:h<CR>:!pandoc % -f markdown -o %<.' .input("Output format: ") '<CR>'
+"Lilypond compilation:
+autocmd FileType lilypond command CompMarkup normal! :w<CR>:lcd%:p:h<CR>:!lilypond %<CR><CR>
+
 "My vim mappings below
 
 "Mapping for file search with vim's built in :find command (add set path variable as in the beginning for recursive search):
@@ -57,22 +65,12 @@ command ReadPDF :silent !zathura --fork %<.pdf
 map <f6> :find 
 map! <f6> <esc>:find 
 
-"Mappings for opening LaTeX, Markdown and LilyPond pdf outputs in zathura:
-autocmd FileType tex,markdown,lilypond execute "map <f4> :ReadPDF<CR> | map! <f4> <esc><esc>:ReadPDF<CR>"
-
-"Mappings for LaTeX compilation and subsequent opening of created pdf with zathura:
-autocmd FileType tex map <f5> :w<CR>:!latexmk -pdf -cd --shell-escape %<CR><CR>
-autocmd FileType tex map! <f5> <esc><esc>:w<CR>:!latexmk -pdf -cd --shell-escape %<CR><CR>
-
-"Mappings for pandoc Markdown compilation:
-"You will essentially be asked for output format (as an extension: i.e.: pdf, tex, docx, etc.)
-autocmd FileType markdown map <f5> :w<CR>:lcd%:p:h<CR>:!pandoc % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
-autocmd FileType markdown map! <f5> <esc>:w<CR>:lcd%:p:h<CR>:!pandoc % -f markdown -o %<."$(read -p "Output format: " format; echo "$format")"<CR><CR>
-
-"Mappings for lilypond sheet music compilation:
 autocmd FileType lilypond mapclear <buffer>
-autocmd FileType lilypond map <f5> :w<CR>:lcd%:p:h<CR>:!lilypond %<CR><CR>
-autocmd FileType lilypond map! <f5> <esc>:w<CR>:lcd%:p:h<CR>:!lilypond %<CR><CR>
+
+"Mapping for markup compile:
+autocmd FileType tex,markdown,lilypond exe "map <f5> :CompMarkup<CR>" | "map! <f5> <esc><esc>:CompMarkup<CR>"
+"Mappings for opening LaTeX, Markdown and LilyPond pdf outputs in zathura:
+autocmd FileType tex,markdown,lilypond exe "map <f4> :ReadPDF<CR> | map! <f4> <esc><esc>:ReadPDF<CR>"
 
 "Mappings for loading of .Xresources upon pressing f5:
 autocmd FileType xdefaults map <f5> :w<CR><CR>:!xrdb ~/.Xresources<CR><CR>
