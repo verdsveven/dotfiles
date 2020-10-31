@@ -1,7 +1,6 @@
 "Welcome to my .vimrc!
 
-"Below are all the set commands
-
+"Set commands:
 set encoding=utf-8		"Setting encoding to utf-8
 set laststatus=2		"Sets when the last window will have a statusline
 set number			"Setting vim to have numbers for lines on the side
@@ -18,7 +17,7 @@ set path+=**			"List of directories which will be searched by commands such as :
 set nu rnu			"Enables relative numbers
 set autoindent			"Automatic indentation
 
-"My colorscheme
+"My colorscheme:
 colo default
 set background=dark		"Sets the background color
 
@@ -30,7 +29,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 "My plugins using vim-plug
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
@@ -49,7 +47,7 @@ Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
-"My custom commands
+"My custom commands:
 
 "A command to open the current document's pdf in zathura:
 command ReadPDF :silent !zathura --fork %<.pdf
@@ -62,7 +60,7 @@ autocmd FileType markdown command CompMarkup exe 'normal!:w<CR>:lcd%:p:h<CR>:!pa
 "Lilypond compilation:
 autocmd FileType lilypond command CompMarkup normal! :w<CR>:lcd%:p:h<CR>:!lilypond %<CR><CR>
 
-"My vim mappings below
+"My vim mappings:
 
 "Mapping for file search with vim's built in :find command (add set path variable as in the beginning for recursive search):
 "Simply start typing and press tab for auto-completion e.g. Docume <Tab> completes to Documents, etc.
