@@ -80,8 +80,8 @@ autocmd FileType lilypond map <f5> :w<CR>:lcd%:p:h<CR>:!lilypond %<CR><CR>
 autocmd FileType lilypond map! <f5> <esc>:w<CR>:lcd%:p:h<CR>:!lilypond %<CR><CR>
 
 "Mappings for loading of .Xresources upon pressing f5:
-autocmd FileType xdefaults map <f5> :w<CR><CR>:lcd%:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR>
-autocmd FileType xdefaults map! <f5> <esc><esc>:w<CR><CR>:lcd%:p:h<CR><CR>:!xrdb ~/.Xresources<CR><CR>
+autocmd FileType xdefaults map <f5> :w<CR><CR>:!xrdb ~/.Xresources<CR><CR>
+autocmd FileType xdefaults map! <f5> <esc><esc>:w<CR><CR>:!xrdb ~/.Xresources<CR><CR>
 
 "Airline settings:
 let g:airline_theme='wal'
