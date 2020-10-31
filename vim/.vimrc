@@ -1,30 +1,22 @@
 "Welcome to my .vimrc!
 
 "Below are all the set commands
-"Essentially the main declarations needed
-"These include:
-"Setting encoding to utf-8
-"Setting vim to have numbers for lines on the side
-"Setting linebreak so that vim doesn't break apart words
-"Setting clipboard to the + register
-"Setting filetype plugin on (very important!)
 
-set encoding=utf-8
-set laststatus=2
-set number
-set lbr
-set clipboard=unnamedplus
-set incsearch
-set nohlsearch
-set nocompatible
+set encoding=utf-8		"Setting encoding to utf-8
+set laststatus=2		"Sets when the last window will have a statusline
+set number			"Setting vim to have numbers for lines on the side
+set lbr				"Setting linebreak so that vim doesn't break apart words
+set clipboard=unnamedplus	"Setting clipboard to the + register
+set incsearch			"Shows where the pattern typed so far matches
+set nohlsearch			"Disables highlighting words after a search
+set nocompatible		"Disables vi-compatibility mode
 set display+=lastline
-set wrap
-filetype on
-set wildmenu
-set path+=**
-set nu rnu
-set autoindent
-set hidden
+set wrap			"Essentially enables soft-wrap
+filetype on			"Setting filetype plugin on (very important!)
+set wildmenu			"Enables better command line completion with <Tab>
+set path+=**			"List of directories which will be searched by commands such as :find
+set nu rnu			"Enables relative numbers
+set autoindent			"Automatic indentation
 
 "A script to download and install vim-plug if it is not already installed:
 if empty(glob('~/.vim/autoload/plug.vim'))
