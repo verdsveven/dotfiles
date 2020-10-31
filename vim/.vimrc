@@ -45,6 +45,10 @@ Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
+"My custom commands
+
+"A command to open the current document's pdf in zathura:
+command ReadPDF :silent !zathura --fork %<.pdf
 
 "My vim mappings below
 
@@ -54,8 +58,7 @@ map <f6> :find
 map! <f6> <esc>:find 
 
 "Mappings for opening LaTeX, Markdown and LilyPond pdf outputs in zathura:
-autocmd FileType tex,markdown,lilypond map <f4> :!zathura --fork %<.pdf<CR><CR>
-autocmd FileType tex,markdown,lilypond map! <f4> <esc><esc>:!zathura --fork %<.pdf<CR><CR>
+autocmd FileType tex,markdown,lilypond execute "map <f4> :ReadPDF<CR> | map! <f4> <esc><esc>:ReadPDF<CR>"
 
 "Mappings for LaTeX compilation and subsequent opening of created pdf with zathura:
 autocmd FileType tex map <f5> :w<CR>:!latexmk -pdf -cd --shell-escape %<CR><CR>
