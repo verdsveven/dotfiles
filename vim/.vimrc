@@ -20,6 +20,8 @@ set autoindent			"Automatic indentation
 "My colorscheme:
 colo default
 set background=dark		"Sets the background color
+highlight clear SpellBad	"Clears the highlighting for badly spelled words (changed to undercurl:)
+highlight SpellBad cterm=undercurl
 
 "A script to download and install vim-plug if it is not already installed:
 if empty(glob('~/.vim/autoload/plug.vim'))
