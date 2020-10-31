@@ -18,6 +18,10 @@ set path+=**			"List of directories which will be searched by commands such as :
 set nu rnu			"Enables relative numbers
 set autoindent			"Automatic indentation
 
+"My colorscheme
+colo default
+set background=dark		"Sets the background color
+
 "A script to download and install vim-plug if it is not already installed:
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -79,6 +83,3 @@ autocmd FileType xdefaults map! <f5> <esc><esc>:w<CR><CR>:!xrdb ~/.Xresources<CR
 "Airline settings:
 let g:airline_theme='wal'
 let g:airline#extensions#tabline#enabled = 1
-
-"My colourscheme
-colo elflord
