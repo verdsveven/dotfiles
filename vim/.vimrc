@@ -72,9 +72,9 @@ map! <f6> <esc>:find
 autocmd FileType lilypond mapclear <buffer>
 
 "Mapping for markup compile:
-autocmd FileType tex,markdown,lilypond exe "map <f5> :CompMarkup<CR>" | "map! <f5> <esc><esc>:CompMarkup<CR>"
+autocmd FileType tex,markdown,lilypond exe 'map <f5> :CompMarkup<CR>|map! <f5> <esc><esc>:CompMarkup<CR>'
 "Mappings for opening LaTeX, Markdown and LilyPond pdf outputs in zathura:
-autocmd FileType tex,markdown,lilypond exe "map <f4> :ReadPDF<CR> | map! <f4> <esc><esc>:ReadPDF<CR>"
+autocmd FileType tex,markdown,lilypond exe 'map <f4> :ReadPDF<CR>:redraw!<CR>|map! <f4> <esc><esc>:ReadPDF<CR>:redraw!<CR>'
 
 "Mappings for loading of .Xresources upon pressing f5:
 autocmd FileType xdefaults map <f5> :w<CR><CR>:!xrdb ~/.Xresources<CR><CR>
