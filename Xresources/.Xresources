@@ -1,6 +1,4 @@
-*font: Inconsolata-16
+st.font: DejaVu Sans Mono-14
 *alpha: 0.96
 
 #include "/home/lukasz/.cache/wal/colors.Xresources"
-
-dmenu.font: Liberation Mono-10
