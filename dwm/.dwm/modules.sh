@@ -11,7 +11,8 @@ bat(){
 }
 
 lux(){
-	( which light || echo none ) && echo `light -G`%
+	lux=`light -G`
+	( [ -z $lux ] && echo none ) || echo $lux%
 }
 
 vol(){
