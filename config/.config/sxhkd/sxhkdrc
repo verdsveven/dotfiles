@@ -1,0 +1,27 @@
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# Custom bindings
+#
+
+# Volume controls
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+	amixer -R sset 'Master' 5%{+,-} && pkill -RTMIN+10 dwmblocks
+
+# Brightness controls
+{XF86MonBrightnessUp,XF86MonBrightnessDown}
+	light {-A,-U} 10 && pkill -RTMIN+11 dwmblocks
+
+# Toggle keyboard layouts
+alt + Shift_L
+	chLayout.sh $(cat $HOME/.config/layouts) && pkill -RTMIN+12 dwmblocks
+
+# Take screenshot
+Print ; {s,w,d} ; {f,c}
+	maim -o {-s,-i $(xdotool getactivewindow), } {~/Pictures/screenshots/$(date -I's').png,| xclip -selection clipboard -t image/png}
+
+# Lock screen
+super + x
+	slock
