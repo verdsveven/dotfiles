@@ -1,25 +1,18 @@
-#!/usr/bin/env sh
+#!/bin/sh
+# Programs to run in the background:
+nm-applet &
+sxhkd &
+wal -R &
+dwmblocks &
 
-wal -R & 
-
-picom &
-
+# Some other declarations:
 amixer set Master 0 &
+xsetroot -cursor_name left_ptr &
 
-status() { \
-	echo "|";
-	echo "wifi: `iw dev wlp8s0 link | sed -n -e 's/^.*SSID: //p'` |"; 
-	echo "bat: `cat /sys/class/power_supply/BAT0/capacity`%, `cat /sys/class/power_supply/BAT0/status`"; 
-	echo "| vol: `amixer get Master | grep -o --max-count=1 "[0-9]*%"`"; 
-	echo "| lang: `setxkbmap -print -v 10 | sed -n -e 's/^.*layout:     //p'`"; 
-	echo "| `date`"; 
-}
+# Launch scripts:
+if script_lnchr.sh -s $(cat ./scripts.txt); then notify-send "Scripts successfully started" -u normal ; fi
 
-update() { \
-	xsetroot -name "$(status | tr '\n' ' ')" &
-    }
-
-while true; do
-	update
-	sleep 1s
-done & 
+# Compositor:
+killall -wq -s KILL picom
+hst-chk.sh Laptop && picom --blur-background -b
+hst-chk.sh PC && picom --backend xrender --no-vsync --blur-background -b
