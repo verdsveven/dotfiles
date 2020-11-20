@@ -7,7 +7,7 @@ network(){
 bat(){
 	cap=`cat /sys/class/power_supply/BAT0/capacity`
 	stat=`cat /sys/class/power_supply/BAT0/status`
-	( [ -z $cap -o -z $stat ] && echo "No battery" ) || echo "$cap%, $stat"
+	( [ -z $cap -o -z $stat ] && echo "none" ) || echo "$cap%, $stat"
 }
 
 lux(){
