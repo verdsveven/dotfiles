@@ -52,7 +52,7 @@ call plug#end()
 "My custom commands:
 
 "A command to open the current document's pdf in zathura:
-autocmd FileType tex,markdown,lilypond command-buffer ReadPDF :silent !zathura --fork "%<.pdf"
+autocmd FileType tex,markdown,lilypond command!-buffer ReadPDF :silent !zathura --fork "%<.pdf"
 
 "Commands to compile markup
 "LaTeX compilation:
