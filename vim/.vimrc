@@ -35,6 +35,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'tpope/vim-surround'
 
 Plug 'tpope/vim-fugitive'
@@ -42,8 +44,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 
 Plug 'dylanaraps/wal.vim'
-
-Plug 'vim-airline/vim-airline-themes'
 
 Plug 'junegunn/goyo.vim'
 
