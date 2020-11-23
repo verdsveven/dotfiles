@@ -33,9 +33,7 @@ endif
 "My plugins using vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 
 Plug 'tpope/vim-surround'
 
@@ -80,6 +78,14 @@ autocmd FileType tex,markdown,lilypond exe 'map <f4> :ReadPDF<CR>:redraw!<CR>|ma
 autocmd FileType xdefaults map <f5> :w<CR><CR>:!xrdb ~/.Xresources<CR><CR>
 autocmd FileType xdefaults map! <f5> <esc><esc>:w<CR><CR>:!xrdb ~/.Xresources<CR><CR>
 
-"Airline settings:
-let g:airline_theme='wal'
-let g:airline#extensions#tabline#enabled = 1
+"Lightline settings:
+let g:lightline = {
+      \ 'colorscheme': '16color',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
