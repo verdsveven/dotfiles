@@ -60,6 +60,9 @@ autocmd FileType markdown command!-buffer CompMarkup exe 'normal!:w<CR>:!pandoc 
 "Lilypond compilation:
 autocmd FileType lilypond command!-buffer CompMarkup normal! :w<CR>:lcd%:p:h<CR>:!lilypond "%"<CR>
 
+"Silent compilation
+autocmd FileType tex,markdown,lilypond command!-buffer CompMarkupSilent :execute ":normal! :silent CompMarkup<CR>" | execute ':normal! :redraw!<CR>'
+
 "My vim mappings:
 
 "Mapping for file search with vim's built in :find command (add set path variable as in the beginning for recursive search):
@@ -70,7 +73,7 @@ map! <f6> <esc>:find
 autocmd FileType lilypond mapclear <buffer>
 
 "Mapping for markup compile:
-autocmd FileType tex,markdown,lilypond exe 'map <f5> :silent CompMarkup<CR>|map! <f5> <esc><esc>:silent CompMarkup<CR>'
+autocmd FileType tex,markdown,lilypond exe 'map <f5> :CompMarkupSilent<CR>|map! <f5> <esc><esc>CompMarkupSilent<CR>'
 "Mappings for opening LaTeX, Markdown and LilyPond pdf outputs in zathura:
 autocmd FileType tex,markdown,lilypond exe 'map <f4> :ReadPDF<CR>:redraw!<CR>|map! <f4> <esc><esc>:ReadPDF<CR>:redraw!<CR>'
 
