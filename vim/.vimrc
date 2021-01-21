@@ -23,11 +23,16 @@ set background=dark		"Sets the background color
 highlight clear SpellBad	"Clears the highlighting for badly spelled words (changed to undercurl:)
 highlight SpellBad cterm=undercurl
 
-"A script to download and install vim-plug if it is not already installed:
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+"A script to download and install vim-plug if it is not already installed (vim and nvim):
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim')) || empty(glob('~/.vim/autoload/plug.vim'))
+	if has('nvim')
+		silent !curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	else
+		silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	endif
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 "My plugins using vim-plug
