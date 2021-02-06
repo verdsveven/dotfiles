@@ -75,6 +75,14 @@ autocmd FileType tex,markdown,lilypond command!-buffer CompMarkupSilent :execute
 map <f6> :find 
 map! <f6> <esc>:find 
 
+"Mappings for easing prose-writing:
+autocmd FileType text,tex,markdown,lilypond map k gk
+autocmd FileType text,tex,markdown,lilypond map j gj
+autocmd FileType text,tex,markdown,lilypond map <Up> gk
+autocmd FileType text,tex,markdown,lilypond map <Down> gj
+autocmd FileType text,tex,markdown,lilypond map <F11> :Goyo<CR>
+autocmd FileType text,tex,markdown,lilypond map! <F11> <esc>:Goyo<CR>li
+
 autocmd FileType lilypond mapclear <buffer>
 
 "Mapping for markup compile:
