@@ -86,7 +86,7 @@ autocmd FileType text,tex,markdown,lilypond map! <F11> <esc>:Goyo<CR>li
 autocmd FileType lilypond mapclear <buffer>
 
 "Mapping for markup compile:
-autocmd FileType tex,markdown,lilypond exe 'map <f5> :CompMarkupSilent<CR>|map! <f5> <esc><esc>CompMarkupSilent<CR>'
+autocmd FileType tex,markdown,lilypond exe 'map <f5> :CompMarkupSilent<CR>|map! <f5> <esc><esc>:CompMarkupSilent<CR>'
 "Mappings for opening LaTeX, Markdown and LilyPond pdf outputs in zathura:
 autocmd FileType tex,markdown,lilypond exe 'map <f4> :ReadPDF<CR>:redraw!<CR>|map! <f4> <esc><esc>:ReadPDF<CR>:redraw!<CR>'
 
