@@ -61,7 +61,7 @@ autocmd FileType tex,markdown,lilypond command!-buffer ReadPDF :silent !zathura 
 "LaTeX compilation:
 autocmd FileType tex command!-buffer CompMarkup normal! :w<CR>:!latexmk -pdf -cd --shell-escape -lualatex "%"<CR>
 "Markdown compilation (asks for output format as an extension: i.e.: pdf, tex, docx, etc.):
-autocmd FileType markdown command!-buffer CompMarkup exe 'normal!:w<CR>:!pandoc "%" -f markdown -o "%<.' .input("Output format: ") .'"<CR>'
+autocmd FileType markdown command!-buffer CompMarkup if !exists('b:format') | let b:format = input("Output format: ") | endif | exe 'normal!:w<CR>:!pandoc "%" -f markdown -o "%<.' . b:format .'"<CR>'
 "Lilypond compilation:
 autocmd FileType lilypond command!-buffer CompMarkup normal! :w<CR>:lcd%:p:h<CR>:!lilypond "%"<CR>
 
