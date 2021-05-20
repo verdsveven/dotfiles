@@ -3,14 +3,14 @@
 nm-applet &
 sxhkd &
 wal -R &
-dwmblocks &
+( cd $HOME/.dwm/ && dwmblocks) &
 
 # Some other declarations:
 amixer set Master 0 &
 xsetroot -cursor_name left_ptr &
 
 # Launch scripts:
-if script_lnchr.sh -s "$(cat ./scripts.txt)"; then notify-send "Scripts successfully started" -u normal ; fi
+cd $HOME/.dwm/ && if script_lnchr.sh -s "$(cat ./scripts.txt)"; then notify-send "Scripts successfully started" -u normal ; fi
 
 # Compositor:
 killall -wq -s KILL picom
