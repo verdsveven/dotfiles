@@ -8,6 +8,8 @@ set lbr				"Setting linebreak so that vim doesn't break apart words
 set clipboard=unnamedplus	"Setting clipboard to the + register
 set incsearch			"Shows where the pattern typed so far matches
 set nohlsearch			"Disables highlighting words after a search
+set ignorecase			"Ignore case of search
+set smartcase			"Overrides ignorecase if at least one capital
 set nocompatible		"Disables vi-compatibility mode
 set display+=lastline
 set wrap			"Essentially enables soft-wrap
