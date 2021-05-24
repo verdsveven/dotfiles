@@ -18,6 +18,7 @@ set wildmenu			"Enables better command line completion with <Tab>
 set path+=**			"List of directories which will be searched by commands such as :find
 set nu rnu			"Enables relative numbers
 set autoindent			"Automatic indentation
+set mouse=a			"Enable mouse
 
 "My colorscheme:
 colo default
