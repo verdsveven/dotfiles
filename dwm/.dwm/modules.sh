@@ -11,7 +11,7 @@ bat(){
 }
 
 lux(){
-	lux=`light -G`
+	lux=`light -G | cut -d'.' -f1`
 	( [ -z $lux ] && echo none ) || echo $lux%
 }
 
