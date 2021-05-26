@@ -1,4 +1,4 @@
 st.font: DejaVu Sans Mono-14
-*alpha: 0.96
+st.alpha: 0.96
 
 #include ".colors/colorscheme"
