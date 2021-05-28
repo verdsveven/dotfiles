@@ -3,33 +3,25 @@
 * These are work in progress; so keep that in mind
 
 ## Some notes on installation
-* Clone the repository with git clone as usual (wherever you prefer)
-* These dotfiles are meant to be installed using stow, more specifically I use:
+* The (re/un)install process is automated with a very simple Makefile utilising GNU stow commands (see Makefile)
 
-```
-cd dotfiles
-stow */
-```
-* cd into the directory into which you cloned the repository and not the dotfiles directory if you used a different directory
-* Utilising stow */ avoids errors because of the README as it only selects directories and not files
-* By default, stow installs into the parent directory of the current directory i.e. home if you clone it into home
-	* If you don't clone it into the home directory you can use:
+### General instructions:
+* Clone the repository with git clone (wherever you prefer)
+* cd into the directory wherein the repository was cloned and run the following commands depending on use case:
 
-```
-stow */ -t $HOME/
+### To install:
+```sh
+make install
 ```
 
-* -t here specifies the target directory. Look at man stow if you want other options
-
-* To remove:
-
-```
-stow -D */ -t $HOME/
+### To uninstall:
+```sh
+make uninstall
 ```
 
-* To apply after having pulled changes:
-```
-stow -R */ -t $HOME/
+### To apply changes after pulling (reinstall):
+```sh
+make reinstall
 ```
 
 ## .vimrc
