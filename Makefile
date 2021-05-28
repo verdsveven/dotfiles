@@ -1,8 +1,8 @@
 install:
-	stow */ -t ${HOME}/
+	stow -t ${HOME}/ */
 
 uninstall:
-	stow */ -Dt ${HOME}/
+	stow -Dt ${HOME}/ */
 
 reinstall:
-	stow */ -Rt ${HOME}/
+	stow -Rt ${HOME}/ */
