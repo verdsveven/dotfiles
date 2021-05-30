@@ -21,6 +21,7 @@ PS1='[%n@%M %1~]${vcs_info_msg_0_}$ '
 # Miscellaneous option
 export KEYTIMEOUT=1		# Key timeout
 export HISTFILE=~/.zsh_history	# History file
+export SAVEHIST=10000		# History file
 setopt INC_APPEND_HISTORY	# Append to history with each command
 setopt HIST_IGNORE_ALL_DUPS	# Ignore all duplicate commands in history
 comp_options+=(globdots)	# Include hidden files.
