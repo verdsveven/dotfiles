@@ -34,3 +34,7 @@ bindkey "^[[4~" end-of-line
 
 # Files to include
 source $HOME/.config/aliasrc
+
+# Install antigen
+[ -f ~/.zsh/antigen.zsh ] || curl -L git.io/antigen --create-dirs -o ~/.zsh/antigen.zsh
+source ~/.zsh/antigen.zsh
