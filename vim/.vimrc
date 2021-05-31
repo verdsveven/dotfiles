@@ -53,6 +53,8 @@ Plug 'dylanaraps/wal.vim'
 
 Plug 'junegunn/goyo.vim'
 
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 "My custom commands:
