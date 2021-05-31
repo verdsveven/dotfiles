@@ -38,3 +38,9 @@ source $HOME/.config/aliasrc
 # Install antigen
 [ -f ~/.zsh/antigen.zsh ] || curl -L git.io/antigen --create-dirs -o ~/.zsh/antigen.zsh
 source ~/.zsh/antigen.zsh
+
+# Antigen plugins
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+antigen apply
