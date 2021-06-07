@@ -13,6 +13,7 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 
 # Prompt
+unset PROMPT_SP
 setopt prompt_subst
 LP_ENABLE_SHORTEN_PATH=0
 PROMPT_DIRTRIM=1
