@@ -162,6 +162,11 @@
   org-refile-targets '((org-agenda-files :maxlevel . 9))
   org-refile-use-outline-path 'file 
   org-outline-path-complete-in-steps nil)
+  (setq org-summary-num 0)
+  (defun org-summary-todo (n-done n-not-done)
+    "Switch entry to DONE when all subentries are done, to TODO otherwise."
+    (org-todo (if (<= n-not-done org-summary-num) "DONE" "TODO")))
+  (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
   (add-hook 'org-mode-hook
 	    (lambda()
 	      (org-superstar-mode)
