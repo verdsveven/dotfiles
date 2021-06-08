@@ -4,7 +4,6 @@
 ;; Minimize garbage collection during startup
 (setq gc-cons-threshold most-positive-fixnum)
 
-;; Profile emacs startup
 (add-hook
  'emacs-startup-hook
  (lambda ()
