@@ -152,6 +152,9 @@
       "* [[%x][%?]]")
      ("j" "Journal" entry (file+datetree org-journal-location "Personal")
       "* %?\nEntered on %U"))
+  org-todo-keywords
+  '((sequence "TODO(t)" "NEXT(n)" "OPEN(o)" "|" "DONE(d)" "CANCELLED(c)"))
+  org-log-into-drawer t
   org-refile-targets '((org-agenda-files :maxlevel . 9))
   org-refile-use-outline-path 'file 
   org-outline-path-complete-in-steps nil)
