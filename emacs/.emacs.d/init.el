@@ -185,6 +185,7 @@
 (global-set-key [f6] 'ffap)
 (global-set-key [f4] 'pdf-open)
 (global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
