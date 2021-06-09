@@ -88,6 +88,7 @@
 (use-package ivy
   :init (ivy-mode)
   :config
+  (setq ivy-use-virtual-buffers t)
   (setq
    ivy-re-builders-alist
    '((ivy-switch-buffer . ivy--regex-plus)
