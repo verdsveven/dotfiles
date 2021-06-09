@@ -122,9 +122,9 @@
    dashboard-center-content t
    dashboard-items
    '(
-     (recents  . 10)
+     (recents  . 8)
      (bookmarks . 5)
-     (agenda . 10))))
+     (agenda . 12))))
 
 ;;; Org
 (use-package org-superstar :config (setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "◈" "◇" "□" "▣" "✸" "✿")))
