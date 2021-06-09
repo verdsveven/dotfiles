@@ -192,7 +192,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(dashboard org-superstar auctex exec-path-from-shell ivy doom-themes doom-modeline evil-collection evil use-package)))
+   '(dashboard org-superstar auctex exec-path-from-shell ivy flx doom-themes doom-modeline evil-collection evil use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
