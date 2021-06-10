@@ -11,8 +11,7 @@
  )
 
 ;;; Declarations
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14"))
-(add-to-list 'default-frame-alist '(alpha 96))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14") '(alpha 96))
 (set-frame-parameter (selected-frame) 'alpha 96)
 
 (setq-default
