@@ -14,23 +14,21 @@
 (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14") '(alpha 96))
 (set-frame-parameter (selected-frame) 'alpha 96)
 
-(setq-default
- process-connection-type nil		; Fixes program launching
- frame-inhibit-implied-resize t		; Does not resize
- frame-resize-pixelwise t		; Resize pixelwise
- inhibit-startup-message t 		; Inhibits the default emacs start message
- scroll-step 1 				; Better scrolling
- scroll-margin 0
- scroll-conservatively 100000
- scroll-preserve-screen-position 1
- indent-tabs-mode t
- backup-directory-alist			; Backup directory
- '(("." . "~/.emacs.d/backup/"))
- auto-save-file-name-transforms
- `((".*" "~/.emacs.d/backup/" t))
- backup-by-copying t
- delete-old-versions t
-)
+(setq process-connection-type nil)		; Fixes program launching
+(setq frame-inhibit-implied-resize t)		; Does not resize
+(setq frame-resize-pixelwise t)			; Resize pixelwise
+(setq inhibit-startup-message t) 		; Inhibits the default emacs start message
+(setq scroll-step 1) 				; Better scrolling
+(setq scroll-margin 0)
+(setq scroll-conservatively 100000)
+(setq scroll-preserve-screen-position 1)
+(setq indent-tabs-mode t)
+(setq backup-directory-alist			; Backup directory
+      '(("." . "~/.emacs.d/backup/")))
+(setq auto-save-file-name-transforms
+      `((".*" "~/.emacs.d/backup/" t)))
+(setq backup-by-copying t)
+(setq delete-old-versions t)
 (window-preserve-size)
 
 ;;; Modes
@@ -137,37 +135,36 @@
     "Return the absolute address of an org file, given its relative name."
     (concat (file-name-as-directory org-directory) filename))
   (add-to-list 'org-modules 'org-habit t )
-  (setq
-   org-startup-folded t
-   org-directory "~/org"
-   org-inbox-location (org-file-path "inbox.org")
-   org-journal-location (org-file-path "journal.org")
-   org-archive-location (concat (org-file-path "archive.org") "::* From %s")
-   org-agenda-files '("~/org")
-   org-agenda-skip-deadline-prewarning-if-scheduled 'pre-scheduled
-   org-agenda-skip-scheduled-if-deadline-is-shown 'not-today
-   org-agenda-skip-scheduled-delay-if-deadline 'post-deadline
-   org-agenda-window-setup 'current-window
-   org-habit-graph-column 90
-   org-log-done 'time
-   org-capture-templates
-  '(
-     ("t" "Todo" entry (file+headline org-inbox-location "Tasks")
-      "* TODO %?")
-     ("r" "Reading list" entry (file+headline org-inbox-location "Tasks")
-      "* TODO Read: %?")
-     ("i" "Idea" entry (file+headline org-inbox-location "Ideas")
-      "* %?")
-     ("l" "Link" entry (file+headline org-inbox-location "Links")
-      "* [[%x][%?]]")
-     ("j" "Journal" entry (file+datetree org-journal-location "Personal")
-      "* %?\nEntered on %U"))
-  org-todo-keywords
-  '((sequence "TODO(t)" "NEXT(n)" "OPEN(o)" "|" "DONE(d)" "CANCELLED(c)"))
-  org-log-into-drawer t
-  org-refile-targets '((org-agenda-files :maxlevel . 9))
-  org-refile-use-outline-path 'file 
-  org-outline-path-complete-in-steps nil)
+  (setq org-startup-folded t)
+  (setq org-directory "~/org")
+  (setq org-inbox-location (org-file-path "inbox.org"))
+  (setq org-journal-location (org-file-path "journal.org"))
+  (setq org-archive-location (concat (org-file-path "archive.org") "::* From %s"))
+  (setq org-agenda-files '("~/org"))
+  (setq org-agenda-skip-deadline-prewarning-if-scheduled 'pre-scheduled)
+  (setq org-agenda-skip-scheduled-if-deadline-is-shown 'not-today)
+  (setq org-agenda-skip-scheduled-delay-if-deadline 'post-deadline)
+  (setq org-agenda-window-setup 'current-window)
+  (setq org-habit-graph-column 90)
+  (setq org-log-done 'time)
+  (setq org-capture-templates
+	'(
+	  ("t" "Todo" entry (file+headline org-inbox-location "Tasks")
+	   "* TODO %?")
+	  ("r" "Reading list" entry (file+headline org-inbox-location "Tasks")
+	   "* TODO Read: %?")
+	  ("i" "Idea" entry (file+headline org-inbox-location "Ideas")
+	   "* %?")
+	  ("l" "Link" entry (file+headline org-inbox-location "Links")
+	   "* [[%x][%?]]")
+	  ("j" "Journal" entry (file+datetree org-journal-location "Personal")
+	   "* %?\nEntered on %U")))
+  (setq org-todo-keywords
+	'((sequence "TODO(t)" "NEXT(n)" "OPEN(o)" "|" "DONE(d)" "CANCELLED(c)")))
+  (setq org-log-into-drawer t)
+  (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
+  (setq org-refile-use-outline-path 'file)
+  (setq org-outline-path-complete-in-steps nil)
   (setq org-summary-num 0)
   (defun org-summary-todo (n-done n-not-done)
     "Switch entry to DONE when all subentries are done, to TODO otherwise."
@@ -198,7 +195,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(dashboard org-superstar auctex exec-path-from-shell ivy flx doom-themes doom-modeline evil-collection evil use-package)))
+   '(org-superstar dashboard page-break-lines auctex exec-path-from-shell ivy flx doom-themes doom-modeline all-the-icons evil-collection evil undo-tree use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
