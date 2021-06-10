@@ -148,6 +148,8 @@
    org-agenda-skip-deadline-prewarning-if-scheduled 'pre-scheduled
    org-agenda-skip-scheduled-if-deadline-is-shown 'not-today
    org-agenda-skip-scheduled-delay-if-deadline 'post-deadline
+   org-agenda-window-setup 'current-window
+   org-habit-graph-column 90
    org-log-done 'time
    org-capture-templates
   '(
