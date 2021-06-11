@@ -42,7 +42,7 @@
 (scroll-bar-mode -1)        		; Disable visible scrollbar
 (set-fringe-mode '(1 . 1))  		; Sets minimal fringes
 (global-display-line-numbers-mode)	; Numbers
-(visual-line-mode)			; Wrap
+(global-visual-line-mode)		; Wrap
 (size-indication-mode)			; Size indication
 (savehist-mode)				; Save history
 (add-hook 'after-make-frame-functions
