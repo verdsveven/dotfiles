@@ -11,8 +11,9 @@
  )
 
 ;;; Declarations
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14") '(alpha 96))
-(set-frame-parameter (selected-frame) 'alpha 96)
+(add-to-list 'default-frame-alist '(alpha 96))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14"))
+(set-face-attribute 'default t :font "DejaVu Sans Mono-14")
 
 (setq process-connection-type nil)		; Fixes program launching
 (setq frame-inhibit-implied-resize t)		; Does not resize
@@ -42,6 +43,7 @@
 (size-indication-mode)			; Size indication
 (savehist-mode)				; Save history
 (add-hook 'after-make-frame-functions
+	  (set-frame-parameter (selected-frame) 'alpha 96)
 	  (setq doom-modeline-icon t)
 	  'dashboard-refresh-buffer
 	  )
