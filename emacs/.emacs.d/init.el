@@ -14,9 +14,6 @@
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (when (file-exists-p custom-file)
   (load custom-file))
-(add-to-list 'default-frame-alist '(alpha 96))
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14"))
-(set-face-attribute 'default t :font "DejaVu Sans Mono-14")
 
 (setq process-connection-type nil)		; Fixes program launching
 (setq frame-inhibit-implied-resize t)		; Does not resize
