@@ -77,8 +77,8 @@ autocmd FileType tex,markdown,lilypond command!-buffer CompMarkupSilent :execute
 
 "Mapping for file search with vim's built in :find command (add set path variable as in the beginning for recursive search):
 "Simply start typing and press tab for auto-completion e.g. Docume <Tab> completes to Documents, etc.
-map <f6> :find 
-map! <f6> <esc>:find 
+map <f6> :Files<CR>
+map! <f6> <esc>:Files<CR>
 
 "Mappings for easing prose-writing:
 autocmd FileType text,tex,markdown,lilypond map k gk
