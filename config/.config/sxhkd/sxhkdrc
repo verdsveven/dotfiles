@@ -31,5 +31,5 @@ super + n
 	$TERM tnote.sh -d $HOME/Documents/Personal/Notes
 
 # Launch editor in term
-super + e
-	cd && $TERM $EDITOR
+super + {e, v}
+	cd && {$TERM $EDITOR, sh -c "$VISUAL"}
