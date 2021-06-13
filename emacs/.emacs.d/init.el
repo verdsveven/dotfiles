@@ -123,6 +123,7 @@
    dashboard-set-heading-icons t
    dashboard-startup-banner 'logo
    dashboard-center-content t
+   dashboard-week-agenda t
    dashboard-items
    '(
      (recents  . 8)
