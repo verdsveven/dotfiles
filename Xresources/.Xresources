@@ -1,4 +1,7 @@
-st.font: DejaVu Sans Mono-14
+#define FONT DejaVu Sans Mono-14
+st.font: FONT
 st.alpha: 0.96
+emacs.font: FONT
+emacs.alpha: 96
 
 #include ".colors/colorscheme"
