@@ -43,7 +43,6 @@
 (size-indication-mode)			; Size indication
 (savehist-mode)				; Save history
 (add-hook 'after-make-frame-functions
-	  (set-frame-parameter (selected-frame) 'alpha 96)
 	  (setq doom-modeline-icon t)
 	  'dashboard-refresh-buffer
 	  )
