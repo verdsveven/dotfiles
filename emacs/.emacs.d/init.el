@@ -125,7 +125,7 @@
    dashboard-week-agenda t
    dashboard-items
    '(
-     (recents  . 8)
+     (recents  . 5)
      (bookmarks . 5)
      (agenda . 12))))
 
