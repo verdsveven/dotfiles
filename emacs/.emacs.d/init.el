@@ -111,7 +111,7 @@
   (require 'server)
   (unless (server-running-p) (setq TeX-source-correlate-start-server t)))
 
-(use-package recentf :config (recentf-mode 1))
+(use-package recentf :config (add-hook 'after-init-hook (recentf-mode 1)))
 (use-package page-break-lines)
 (use-package dashboard
   :init (dashboard-setup-startup-hook)
