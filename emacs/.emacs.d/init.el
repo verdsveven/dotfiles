@@ -179,6 +179,18 @@
 	      (local-set-key [f5] 'org-latex-export-to-pdf)))
   (advice-add 'org-refile :after (lambda (&rest _) (org-save-all-org-buffers))))
 
+(use-package org-roam
+  :init (setq org-roam-v2-ack t)
+  :custom (org-roam-directory (file-truename "~/org/KM/"))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n g" . org-roam-graph)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ;; Dailies
+         ("C-c n j" . org-roam-dailies-capture-today))
+  :config (org-roam-setup))
+
 ;;; Custom functions
 (defun latexmk-compile()
   (interactive) (async-shell-command (concat "latexmk -pdf -cd --shell-escape -lualatex " (buffer-file-name))))
