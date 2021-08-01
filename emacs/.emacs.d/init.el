@@ -42,6 +42,7 @@
 (global-visual-line-mode)		; Wrap
 (size-indication-mode)			; Size indication
 (savehist-mode)				; Save history
+(blink-cursor-mode)			; Enable blinking cursor
 (add-hook 'after-make-frame-functions
 	  (setq doom-modeline-icon t)
 	  'dashboard-refresh-buffer
