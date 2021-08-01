@@ -189,7 +189,13 @@
          ("C-c n c" . org-roam-capture)
          ;; Dailies
          ("C-c n j" . org-roam-dailies-capture-today))
-  :config (org-roam-setup))
+  :config
+  (org-roam-setup)
+  (setq org-roam-capture-templates
+	'(("d" "default" plain "%?"
+	   :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+			      "#+title: ${title}\n#+CREATED: %U\n")
+	   :unnarrowed t))))
 
 ;;; Custom functions
 (defun latexmk-compile()
