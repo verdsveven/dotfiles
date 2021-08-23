@@ -12,7 +12,7 @@ super + Escape
 
 # Brightness controls
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
-	light {-A,-U} 10 && pkill -RTMIN+11 dwmblocks
+	light -{A,U} 5 && pkill -RTMIN+11 dwmblocks
 
 # Toggle keyboard layouts
 alt + Shift_L
