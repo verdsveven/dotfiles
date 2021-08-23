@@ -11,8 +11,8 @@ bat(){
 }
 
 lux(){
-	lux=`light -G | cut -d'.' -f1`
-	( [ -z $lux ] && echo none ) || echo $lux%
+	lux=`light -G`
+	( [ -z $lux ] && echo none ) || printf "%.0f%%" $lux
 }
 
 vol(){
