@@ -1,4 +1,4 @@
-#define FONT DejaVu Sans Mono-14
+#define FONT JetBrains Mono-14
 st.font: FONT
 st.alpha: 0.96
 emacs.font: FONT
