@@ -148,7 +148,7 @@
   (setq org-agenda-skip-scheduled-if-deadline-is-shown 'not-today)
   (setq org-agenda-skip-scheduled-delay-if-deadline 'post-deadline)
   (setq org-agenda-window-setup 'current-window)
-  (setq org-habit-graph-column 90)
+  (setq org-habit-graph-column 48)
   (setq org-log-done 'time)
   (setq org-capture-templates
 	'(
