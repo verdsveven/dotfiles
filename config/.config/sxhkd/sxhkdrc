@@ -7,8 +7,8 @@ super + Escape
 #
 
 # Volume controls
-{XF86AudioRaiseVolume,XF86AudioLowerVolume}
-	amixer -R sset 'Master' 5%{+,-} && pkill -RTMIN+9 dwmblocks
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
+	amixer -R sset 'Master' {5%+,5%-,1+ toggle} && pkill -RTMIN+9 dwmblocks
 
 # Brightness controls
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
