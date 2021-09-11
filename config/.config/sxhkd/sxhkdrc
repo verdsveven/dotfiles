@@ -10,6 +10,10 @@ super + Escape
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
 	amixer -R sset 'Master' {5%+,5%-,1+ toggle} && pkill -RTMIN+9 dwmblocks
 
+# Media controls
+XF86AudioPlay
+	playerctl play-pause
+
 # Brightness controls
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
 	light -{A,U} 5 && pkill -RTMIN+11 dwmblocks
