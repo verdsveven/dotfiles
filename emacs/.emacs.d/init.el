@@ -37,7 +37,6 @@
 (menu-bar-mode -1)          		; Disable the menu bar
 (tool-bar-mode -1)          		; Disable the toolbar
 (scroll-bar-mode -1)        		; Disable visible scrollbar
-(set-fringe-mode '(1 . 1))  		; Sets minimal fringes
 (global-display-line-numbers-mode)	; Numbers
 (global-visual-line-mode)		; Wrap
 (size-indication-mode)			; Size indication
