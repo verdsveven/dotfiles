@@ -182,7 +182,7 @@
   (advice-add 'org-refile :after (lambda (&rest _) (org-save-all-org-buffers))))
 
 (use-package org-roam
-  :init (setq org-roam-v2-ack t)
+  :init (setq org-roam-v2-ack t) (require 'org-roam-protocol)
   :custom (org-roam-directory (file-truename "~/org/KM/"))
   :bind (("C-c n f" . org-roam-node-find)
          ("C-c n j" . org-roam-dailies-capture-today))
