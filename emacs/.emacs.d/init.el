@@ -182,7 +182,7 @@
   (advice-add 'org-refile :after (lambda (&rest _) (org-save-all-org-buffers))))
 
 (use-package org-roam
-  :init (setq org-roam-v2-ack t) (require 'org-roam-protocol)
+  :init (setq org-roam-v2-ack t)
   :custom (org-roam-directory (file-truename "~/org/KM/"))
   :bind (("C-c n f" . org-roam-node-find)
          ("C-c n j" . org-roam-dailies-capture-today))
@@ -200,7 +200,8 @@
 	'(("d" "default" plain "%?"
 	   :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
 			      "#+title: ${title}\n#+CREATED: %U\n")
-	   :unnarrowed t))))
+	   :unnarrowed t)))
+  (require 'org-roam-protocol))
 
 ;;; Custom functions
 (defun latexmk-compile()
