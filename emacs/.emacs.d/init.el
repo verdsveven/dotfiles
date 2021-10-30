@@ -196,7 +196,7 @@
 		("C-c n t" . org-roam-tag-add)
 		("C-c n o" . org-id-get-create)))
   :config
-  (org-roam-setup)
+  (org-roam-db-autosync-mode)
   (setq org-roam-capture-templates
 	'(("d" "default" plain "%?"
 	   :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
