@@ -22,6 +22,7 @@
 (setq scroll-step 1) 				; Better scrolling
 (setq scroll-margin 0)
 (setq scroll-conservatively 100000)
+(setq mouse-wheel-scroll-amount '(1))
 (setq scroll-preserve-screen-position 1)
 (setq indent-tabs-mode t)
 (setq backup-directory-alist			; Backup directory
