@@ -172,6 +172,7 @@
   (setq org-refile-use-outline-path 'file)
   (setq org-outline-path-complete-in-steps nil)
   (setq org-summary-num 0)
+  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
   (defun org-summary-todo (n-done n-not-done)
     "Switch entry to DONE when all subentries are done, to TODO otherwise."
     (org-todo (if (<= n-not-done org-summary-num) "DONE" "OPEN")))
