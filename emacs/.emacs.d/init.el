@@ -205,6 +205,13 @@
 	   :unnarrowed t)))
   (require 'org-roam-protocol))
 
+(use-package org-roam-ui
+    :after org-roam
+    :config
+    (setq org-roam-ui-sync-theme t
+          org-roam-ui-follow t
+          org-roam-ui-update-on-save t))
+
 ;;; Custom functions
 (defun latexmk-compile()
   (interactive) (async-shell-command (concat "latexmk -pdf -cd --shell-escape -lualatex " (buffer-file-name))))
