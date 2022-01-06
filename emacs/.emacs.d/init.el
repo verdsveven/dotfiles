@@ -63,6 +63,10 @@
 (setq use-package-always-defer t)
 
 ;;; Installed packages
+(use-package exec-path-from-shell
+  :init (when (daemonp)
+	  (exec-path-from-shell-initialize)))
+
 (use-package undo-tree :init (global-undo-tree-mode))
 (use-package evil
   :init
