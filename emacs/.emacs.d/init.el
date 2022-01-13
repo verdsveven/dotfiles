@@ -150,7 +150,7 @@
   (setq org-directory "~/org")
   (setq org-inbox-location (org-file-path "inbox.org"))
   (setq org-journal-location (org-file-path "journal.org"))
-  (setq org-archive-location (concat (org-file-path "archive.org") "::* From %s"))
+  (setq org-archive-location (concat (org-file-path "archive.org_archive") "::* From %s"))
   (setq org-agenda-files '("~/org"))
   (setq org-agenda-skip-deadline-prewarning-if-scheduled 'pre-scheduled)
   (setq org-agenda-skip-scheduled-if-deadline-is-shown 'not-today)
