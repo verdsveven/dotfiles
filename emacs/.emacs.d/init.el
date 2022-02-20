@@ -218,6 +218,9 @@
           org-roam-ui-follow t
           org-roam-ui-update-on-save t))
 
+(use-package anki-editor
+  :init (add-hook 'org-mode-hook (lambda() (anki-editor-mode))) (setq anki-editor-use-math-jax t))
+
 ;;; Custom functions
 (defun latexmk-compile()
   (interactive) (async-shell-command (concat "latexmk -pdf -cd --shell-escape -lualatex " (buffer-file-name))))
