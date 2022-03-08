@@ -169,7 +169,7 @@
 	   "* %?")
 	  ("l" "Link" entry (file+headline org-inbox-location "Links")
 	   "* [[%x][%?]]")
-	  ("j" "Journal" entry (file+datetree org-journal-location "Personal")
+	  ("j" "Journal" entry (file+olp+datetree org-journal-location "Personal")
 	   "* %?\nEntered on %U")))
   (setq org-todo-keywords
 	'((sequence "TODO(t)" "NEXT(n)" "OPEN(o)" "|" "DONE(d)" "CANCELLED(c)")))
