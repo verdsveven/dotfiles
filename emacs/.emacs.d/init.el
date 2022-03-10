@@ -119,6 +119,11 @@
   (require 'server)
   (unless (server-running-p) (setq TeX-source-correlate-start-server t)))
 
+(use-package cdlatex
+  :init
+  (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
+  (add-hook 'org-mode-hook 'turn-on-org-cdlatex))
+
 (use-package recentf :config (add-hook 'after-init-hook (recentf-mode 1)))
 (use-package page-break-lines)
 (use-package dashboard
