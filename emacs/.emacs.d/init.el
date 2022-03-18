@@ -185,6 +185,12 @@
   (setq org-summary-num 0)
   (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
   (setq org-preview-latex-image-directory (concat (make-temp-file "ltx" t) "/"))
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((emacs-lisp . t)
+     (python . t)
+     (jupyter . t)))
+  (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
   (defun org-summary-todo (n-done n-not-done)
     "Switch entry to DONE when all subentries are done, to TODO otherwise."
     (org-todo (if (<= n-not-done org-summary-num) "DONE" "OPEN")))
