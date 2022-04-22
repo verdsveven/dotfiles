@@ -95,15 +95,33 @@
   (doom-themes-org-config))
 
 (use-package flx)
-(use-package ivy
-  :init (ivy-mode)
-  :config
-  (setq ivy-use-virtual-buffers t)
-  (setq
-   ivy-re-builders-alist
-   '((ivy-switch-buffer . ivy--regex-plus)
-     (t . ivy--regex-fuzzy))
-   ivy-initial-inputs-alist nil))
+(use-package vertico
+  :init
+  (vertico-mode)
+  (setq vertico-cycle t))
+
+(use-package vertico-directory
+  :after vertico
+  :ensure nil
+  :bind (:map vertico-map
+              ("RET" . vertico-directory-enter)
+              ("DEL" . vertico-directory-delete-char)
+              ("M-DEL" . vertico-directory-delete-word))
+  :hook (rfn-eshadow-update-overlay . vertico-directory-tidy))
+
+(use-package orderless
+  :init
+  (setq completion-styles '(orderless basic)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
+
+(use-package consult)
+(setq completion-in-region-function
+      (lambda (&rest args)
+        (apply (if vertico-mode
+                   #'consult-completion-in-region
+                 #'completion--in-region)
+               args)))
 
 (use-package exec-path-from-shell :config (when (memq window-system '(mac ns x)) (exec-path-from-shell-initialize)))
 
