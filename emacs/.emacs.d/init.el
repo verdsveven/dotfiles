@@ -111,7 +111,7 @@
 
 (use-package orderless
   :init
-  (setq completion-styles '(orderless basic)
+  (setq completion-styles '(orderless flex)
         completion-category-defaults nil
         completion-category-overrides '((file (styles partial-completion)))))
 
