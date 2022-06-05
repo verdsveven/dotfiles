@@ -217,6 +217,7 @@
   (add-hook 'org-mode-hook
 	    (lambda()
 	      (org-superstar-mode)
+	      (org-indent-mode)
 	      (local-set-key [f5] 'org-latex-export-to-pdf)))
   (advice-add 'org-refile :after (lambda (&rest _) (org-save-all-org-buffers))))
 
