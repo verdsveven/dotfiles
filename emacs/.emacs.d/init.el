@@ -82,6 +82,7 @@
   :init
   (doom-modeline-init)
   :config
+  (setq auto-revert-check-vc-info t)
   (setq
    doom-modeline-height 40
    doom-modeline-bar-width 6
