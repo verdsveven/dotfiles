@@ -203,6 +203,7 @@
   (setq org-summary-num 0)
   (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
   (setq org-preview-latex-image-directory (concat (make-temp-file "ltx" t) "/"))
+  (setq org-startup-indented t)
   (require 'org-tempo)
   (org-babel-do-load-languages
    'org-babel-load-languages
@@ -217,7 +218,6 @@
   (add-hook 'org-mode-hook
 	    (lambda()
 	      (org-superstar-mode)
-	      (org-indent-mode)
 	      (local-set-key [f5] 'org-latex-export-to-pdf)))
   (advice-add 'org-refile :after (lambda (&rest _) (org-save-all-org-buffers))))
 
