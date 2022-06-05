@@ -203,6 +203,7 @@
   (setq org-summary-num 0)
   (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
   (setq org-preview-latex-image-directory (concat (make-temp-file "ltx" t) "/"))
+  (require 'org-tempo)
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
