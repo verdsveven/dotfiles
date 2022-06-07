@@ -79,9 +79,9 @@
 
 (use-package all-the-icons)
 (use-package doom-modeline
-  :init
-  (doom-modeline-init)
+  :defer nil
   :config
+  (doom-modeline-init)
   (setq auto-revert-check-vc-info t)
   (setq
    doom-modeline-height 40
