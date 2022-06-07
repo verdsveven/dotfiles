@@ -146,8 +146,9 @@
 (use-package recentf :config (add-hook 'after-init-hook (recentf-mode 1)))
 (use-package page-break-lines)
 (use-package dashboard
-  :init (dashboard-setup-startup-hook)
+  :defer nil
   :config
+  (dashboard-setup-startup-hook)
   (setq
    initial-buffer-choice (lambda () (get-buffer "*dashboard*"))
    dashboard-set-navigator t
