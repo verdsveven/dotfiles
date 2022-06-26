@@ -77,7 +77,7 @@
 (use-package doom-modeline
   :defer nil
   :config
-  (doom-modeline-init)
+  (doom-modeline-mode 1)
   (setq auto-revert-check-vc-info t)
   (setq
    doom-modeline-height 40
