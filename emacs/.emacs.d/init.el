@@ -201,8 +201,6 @@
   (setq org-summary-num 0)
   (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
   (setq org-preview-latex-image-directory (concat (make-temp-file "ltx" t) "/"))
-  (setq org-startup-indented t)
-  (setq org-indent-mode-turns-on-hiding-stars nil)
   (require 'org-tempo)
   (org-babel-do-load-languages
    'org-babel-load-languages
