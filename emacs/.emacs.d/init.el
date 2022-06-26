@@ -44,10 +44,6 @@
 (savehist-mode)				; Save history
 (blink-cursor-mode)			; Enable blinking cursor
 (electric-pair-mode)			; Enable electric pair mode
-(add-hook 'after-make-frame-functions
-	  (setq doom-modeline-icon t)
-	  'dashboard-refresh-buffer
-	  )
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda() (flyspell-mode 1))))
 
