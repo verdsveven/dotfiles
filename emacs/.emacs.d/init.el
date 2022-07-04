@@ -222,16 +222,21 @@
   :init (setq org-roam-v2-ack t)
   :custom (org-roam-directory (file-truename "~/org/KM/"))
   :bind (("C-c n f" . org-roam-node-find)
-         ("C-c n j" . org-roam-dailies-capture-today))
          ("C-c n g" . org-roam-graph)
-	 (:map org-mode-map
-	       (("C-c n l" . org-roam-buffer-toggle)
-		("C-c n i" . org-roam-node-insert)
-		("C-c n c" . org-roam-capture)
-		("C-c n a" . org-roam-alias-add)
-		("C-c n t" . org-roam-tag-add)
-		("C-c n o" . org-id-get-create)))
+	 :map org-mode-map
+	 (("C-c n l" . org-roam-buffer-toggle)
+	  ("C-c n i" . org-roam-node-insert)
+	  ("C-c n c" . org-roam-capture)
+	  ("C-c n a" . org-roam-alias-add)
+	  ("C-c n t" . org-roam-tag-add)
+	  ("C-c n o" . org-id-get-create))
+	 :map org-roam-dailies-map
+	 ("Y" . org-roam-dailies-capture-yesterday)
+	 ("T" . org-roam-dailies-capture-today))
+  :bind-keymap
+  ("C-c n d" . org-roam-dailies-map)
   :config
+  (require 'org-roam-dailies)
   (org-roam-db-autosync-mode)
   (setq org-roam-capture-templates
 	'(("d" "default" plain "%?"
