@@ -232,7 +232,7 @@
 	  ("C-c n o" . org-id-get-create))
 	 :map org-roam-dailies-map
 	 ("Y" . org-roam-dailies-capture-yesterday)
-	 ("T" . org-roam-dailies-capture-today))
+	 ("T" . org-roam-dailies-capture-tomorrow))
   :bind-keymap
   ("C-c n d" . org-roam-dailies-map)
   :config
