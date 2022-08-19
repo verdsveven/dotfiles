@@ -1,4 +1,4 @@
-#define FONT JetBrains Mono-14
+#define FONT Source Code Pro-15
 st.font: FONT
 st.alpha: 0.96
 emacs.font: FONT
