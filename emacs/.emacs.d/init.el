@@ -168,6 +168,7 @@
     (concat (file-name-as-directory org-directory) filename))
   (add-to-list 'org-modules 'org-habit t )
   (setq org-startup-folded t)
+  (setq org-cycle-separator-lines -1)
   (setq org-directory "~/org")
   (setq org-inbox-location (org-file-path "inbox.org"))
   (setq org-journal-location (org-file-path "journal.org"))
