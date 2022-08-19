@@ -39,6 +39,7 @@
 (tool-bar-mode -1)          		; Disable the toolbar
 (scroll-bar-mode -1)        		; Disable visible scrollbar
 (global-display-line-numbers-mode)	; Numbers
+(setq display-line-numbers-width-start t)
 (global-visual-line-mode)		; Wrap
 (size-indication-mode)			; Size indication
 (savehist-mode)				; Save history
