@@ -67,10 +67,7 @@
 
 (use-package undo-tree :init (global-undo-tree-mode))
 (use-package evil
-  :init
-  (setq evil-want-keybinding nil)
-  (setq evil-disable-insert-state-bindings t)
-  (evil-mode 1)
+  :init (evil-mode 1)
   :config (evil-ex-define-cmd "q" 'kill-this-buffer) (evil-set-undo-system 'undo-tree))
 (use-package evil-collection :after evil :init (evil-collection-init))
 
