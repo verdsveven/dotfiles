@@ -252,6 +252,8 @@
 
 (use-package magit)
 
+(use-package markdown-mode)
+
 (use-package jupyter
   :init (setq org-src-preserve-indentation t))
 
