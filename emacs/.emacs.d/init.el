@@ -234,11 +234,6 @@
   :config
   (require 'org-roam-dailies)
   (org-roam-db-autosync-mode)
-  (setq org-roam-capture-templates
-	'(("d" "default" plain "%?"
-	   :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
-			      "#+title: ${title}\n#+CREATED: %U\n")
-	   :unnarrowed t)))
   (require 'org-roam-protocol))
 
 (use-package org-roam-ui
@@ -247,6 +242,10 @@
     (setq org-roam-ui-sync-theme t
           org-roam-ui-follow t
           org-roam-ui-update-on-save t))
+
+(use-package org-roam-timestamps
+  :after org-roam
+  :config (org-roam-timestamps-mode))
 
 (use-package anki-editor :init (setq anki-editor-use-math-jax t))
 
