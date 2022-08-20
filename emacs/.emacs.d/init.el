@@ -184,8 +184,8 @@
   (setq org-capture-templates
 	'(("t" "Todo" entry (file+headline org-inbox-location "Tasks") "* TODO %?")
 	  ("r" "Reading list" entry (file+headline org-inbox-location "Tasks") "* TODO Read: %?")
-	  ("i" "Idea" item (file+headline org-inbox-location "Ideas"))
-	  ("l" "Link" item (file+headline org-inbox-location "Links") "- [[%x][%?]]")
+	  ("i" "Idea" entry (file+headline org-inbox-location "Ideas"))
+	  ("l" "Link" entry (file+headline org-inbox-location "Links") "* [[%x][%?]]")
 	  ("j" "Journal" entry (file+olp+datetree org-journal-location "Personal") "* %?\nEntered on %U")))
   (setq org-todo-keywords
 	'((sequence "TODO(t)" "NEXT(n)" "OPEN(o)" "|" "DONE(d)" "CANCELLED(c)")))
