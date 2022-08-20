@@ -110,7 +110,8 @@
   :init
   (setq completion-styles '(orderless flex)
         completion-category-defaults nil
-        completion-category-overrides '((file (styles partial-completion)))))
+        completion-category-overrides '((file (styles partial-completion)))
+	orderless-matching-styles '(orderless-flex)))
 
 (use-package consult)
 (setq completion-in-region-function
