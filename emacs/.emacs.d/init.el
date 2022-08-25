@@ -154,6 +154,7 @@
    dashboard-center-content t
    dashboard-week-agenda t
    dashboard-agenda-sort-strategy '(todo-state-up time-up)
+   dashboard-agenda-release-buffers t
    dashboard-items
    '(
      (recents  . 3)
