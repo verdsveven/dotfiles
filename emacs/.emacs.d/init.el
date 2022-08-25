@@ -185,7 +185,7 @@
   (setq org-capture-templates
 	'(("t" "Todo" entry (file+headline org-inbox-location "Tasks") "* TODO %?")
 	  ("r" "Reading list" entry (file+headline org-inbox-location "Tasks") "* TODO Read: %?")
-	  ("i" "Idea" entry (file+headline org-inbox-location "Ideas"))
+	  ("i" "Idea" entry (file+headline org-inbox-location "Ideas") "* %?")
 	  ("l" "Link" entry (file+headline org-inbox-location "Links") "* [[%x][%?]]")
 	  ("j" "Journal" entry (file+olp+datetree org-journal-location "Personal") "* %?\nEntered on %U")))
   (setq org-todo-keywords
