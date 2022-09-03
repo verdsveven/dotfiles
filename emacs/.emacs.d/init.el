@@ -172,6 +172,7 @@
   (setq org-startup-folded t)
   (setq org-startup-indented t)
   (setq org-cycle-separator-lines -1)
+  (setq org-cycle-include-plain-lists 'integrate)
   (setq org-directory "~/org")
   (setq org-inbox-location (org-file-path "inbox.org"))
   (setq org-journal-location (org-file-path "journal.org"))
