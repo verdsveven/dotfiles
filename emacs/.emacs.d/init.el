@@ -248,6 +248,7 @@
           org-roam-ui-update-on-save t))
 
 (use-package org-roam-timestamps
+  :defer nil
   :after org-roam
   :config (org-roam-timestamps-mode))
 
