@@ -153,14 +153,10 @@
    dashboard-set-heading-icons t
    dashboard-startup-banner 'logo
    dashboard-center-content t
-   dashboard-week-agenda t
-   dashboard-agenda-sort-strategy '(todo-state-up time-up)
-   dashboard-agenda-release-buffers t
    dashboard-items
    '(
      (recents  . 3)
-     (bookmarks . 3)
-     (agenda . 12))))
+     (bookmarks . 3))))
 
 ;;; Org
 (use-package org-superstar :config (setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "◈" "◇" "□" "▣" "✸" "✿")))
