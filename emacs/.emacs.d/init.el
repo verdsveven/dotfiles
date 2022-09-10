@@ -70,7 +70,8 @@
   :init
   (setq evil-want-keybinding nil)
   (evil-mode 1)
-  :config (evil-ex-define-cmd "q" 'kill-this-buffer) (evil-set-undo-system 'undo-tree))
+  :config
+  (evil-set-undo-system 'undo-tree))
 (use-package evil-collection :after evil :init (evil-collection-init))
 
 (use-package all-the-icons)
