@@ -1,7 +1,7 @@
 #define FONT Source Code Pro-15
 st.font: FONT
-st.alpha: 0.96
+st.alpha: 0.94
 emacs.font: FONT
-emacs.alpha: 96
+emacs.alpha: 94
 
 #include ".colors/colorscheme"
