@@ -14,5 +14,5 @@ cd $HOME/.dwm/ && if script_lnchr.sh -s "$(cat ./scripts.txt)"; then notify-send
 
 # Compositor:
 killall -wq -s KILL picom
-hst-chk.sh Laptop && picom --blur-background -b
-hst-chk.sh PC && picom --backend xrender --no-vsync --blur-background -b
+hst-chk.sh Laptop && picom -b
+hst-chk.sh PC && picom --backend xrender --no-vsync -b
