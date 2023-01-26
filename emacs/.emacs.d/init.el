@@ -24,6 +24,7 @@
 (setq scroll-conservatively 100000)
 (setq mouse-wheel-scroll-amount '(1))
 (setq scroll-preserve-screen-position 1)
+(setq split-width-threshold 146)
 (setq indent-tabs-mode t)
 (setq backup-directory-alist			; Backup directory
       '(("." . "~/.emacs.d/backup/")))
