@@ -180,6 +180,8 @@
   (setq org-agenda-files '("~/org"))
   (setq org-agenda-skip-deadline-prewarning-if-scheduled 'pre-scheduled)
   (setq org-agenda-skip-scheduled-if-deadline-is-shown 'not-today)
+  (setq org-agenda-skip-scheduled-if-done t)
+  (setq org-agenda-skip-deadline-if-done t)
   (setq org-agenda-skip-scheduled-delay-if-deadline 'post-deadline)
   (setq org-agenda-window-setup 'current-window)
   (setq org-habit-graph-column 48)
