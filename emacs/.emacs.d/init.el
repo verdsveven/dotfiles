@@ -90,7 +90,7 @@
    doom-modeline-major-mode-icon nil))
 
 (use-package doom-themes
-  :init (load-theme 'doom-nord t)
+  :init (load-theme 'doom-nord-aurora t)
   :config (setq doom-themes-enable-bold t doom-themes-enable-italic t)
   (doom-themes-org-config))
 
