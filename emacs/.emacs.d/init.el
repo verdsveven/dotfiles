@@ -262,6 +262,8 @@
 (use-package jupyter
   :init (setq org-src-preserve-indentation t))
 
+(use-package rainbow-mode)
+
 ;;; Custom functions
 (defun latexmk-compile()
   (interactive) (async-shell-command (concat "latexmk -pdf -cd --shell-escape -lualatex " (buffer-file-name))))
