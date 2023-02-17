@@ -220,6 +220,10 @@
 	      (local-set-key [f5] 'org-latex-export-to-pdf)))
   (advice-add 'org-refile :after (lambda (&rest _) (org-save-all-org-buffers))))
 
+(use-package ox-hugo
+  :demand t
+  :after ox)
+
 (use-package org-roam
   :init (setq org-roam-v2-ack t)
   :custom (org-roam-directory (file-truename "~/org/KM/"))
