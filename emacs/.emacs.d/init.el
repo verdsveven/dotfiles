@@ -73,6 +73,7 @@
   (setq evil-want-keybinding nil)
   (evil-mode 1)
   :config
+  (setq evil-auto-indent nil)
   (evil-set-undo-system 'undo-tree))
 (use-package evil-collection :after evil :init (evil-collection-init))
 
