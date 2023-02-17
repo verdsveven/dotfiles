@@ -66,7 +66,8 @@
   :init (when (daemonp)
 	  (exec-path-from-shell-initialize)))
 
-(use-package undo-tree :init (global-undo-tree-mode))
+(use-package undo-tree :init (global-undo-tree-mode)
+  :config (setq undo-tree-auto-save-history nil))
 (use-package evil
   :init
   (setq evil-want-keybinding nil)
