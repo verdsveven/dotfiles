@@ -222,7 +222,8 @@
 
 (use-package ox-hugo
   :demand t
-  :after ox)
+  :after ox
+  :config (setq org-hugo-front-matter-format 'yaml))
 
 (use-package org-roam
   :init (setq org-roam-v2-ack t)
