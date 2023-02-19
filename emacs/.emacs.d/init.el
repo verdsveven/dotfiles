@@ -298,6 +298,13 @@
   :init (add-hook 'after-init-hook (lambda () (require 'org-mime)))
   :after mu4e)
 
+;; Mail
+(setq user-mail-address "lukasz@lukasz-m.com")
+(setq smtpmail-smtp-server "mail.lukasz-m.com")
+(setq smtpmail-smtp-service 587)
+(setq smtpmail-stream-type 'starttls)
+(setq message-send-mail-function 'smtpmail-send-it)
+
 ;;; Custom functions
 (defun latexmk-compile()
   (interactive) (async-shell-command (concat "latexmk -pdf -cd --shell-escape -lualatex " (buffer-file-name))))
