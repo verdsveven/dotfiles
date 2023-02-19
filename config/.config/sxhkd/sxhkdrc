@@ -20,7 +20,7 @@ XF86AudioPlay
 
 # Toggle keyboard layouts
 alt + Shift_L
-	chLayout.sh $(cat $HOME/.config/layouts) && pkill -RTMIN+12 dwmblocks
+	cat $HOME/.config/layouts | dmenu | xargs setxkbmap -layout && pkill -RTMIN+12 dwmblocks
 
 # Take screenshot
 Print ; {s,w,d} ; {f,c}
