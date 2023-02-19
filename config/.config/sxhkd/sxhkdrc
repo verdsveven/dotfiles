@@ -34,6 +34,6 @@ super + x
 super + n
 	$TERM tnote.sh -d $HOME/Documents/Personal/Notes
 
-# Launch editor in term
+# Launch editor in term or visual editor
 super + {e, v}
 	cd && {$TERM $EDITOR, sh -c "$VISUAL"}
