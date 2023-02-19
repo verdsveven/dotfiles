@@ -1,4 +1,4 @@
-#define FONT Source Code Pro-15
+#define FONT Noto Sans Mono-15
 st.font: FONT
 st.alpha: 0.94
 emacs.font: FONT
