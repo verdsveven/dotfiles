@@ -63,8 +63,9 @@
 
 ;;; Installed packages
 (use-package exec-path-from-shell
-  :init (when (daemonp)
-	  (exec-path-from-shell-initialize)))
+  :init
+  (when (daemonp) (exec-path-from-shell-initialize))
+  (when (memq window-system '(mac ns x)) (exec-path-from-shell-initialize)))
 
 (use-package undo-tree :init (global-undo-tree-mode)
   :config (setq undo-tree-auto-save-history nil))
@@ -125,8 +126,6 @@
 		   #'consult-completion-in-region
 		 #'completion--in-region)
 	       args)))
-
-(use-package exec-path-from-shell :config (when (memq window-system '(mac ns x)) (exec-path-from-shell-initialize)))
 
 (use-package auctex
   :defer t
