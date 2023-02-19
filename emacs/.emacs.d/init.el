@@ -70,6 +70,7 @@
   :config (setq undo-tree-auto-save-history nil))
 (use-package evil
   :init
+  (setq sentence-end-double-space nil)
   (setq evil-want-keybinding nil)
   (evil-mode 1)
   :config
