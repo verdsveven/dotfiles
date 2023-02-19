@@ -283,7 +283,15 @@
   (setq mu4e-drafts-folder "/Drafts")
   (setq mu4e-sent-folder "/Sent")
   (setq mu4e-archive-folder "/Archive")
-  (setq mu4e-trash-folder "/Trash"))
+  (setq mu4e-trash-folder "/Trash")
+  ;; shortcuts
+  (setq mu4e-maildir-shortcuts
+	'((:maildir "/Inbox"     :key  ?i)
+	  (:maildir "/Archive"   :key  ?a)
+	  (:maildir "/Sent"      :key  ?s)
+	  (:maildir "/Junk"      :key  ?j)
+	  (:maildir "/Trash"     :key  ?t)
+	  (:maildir "/Drafts"    :key  ?d))))
 
 ;;; Custom functions
 (defun latexmk-compile()
