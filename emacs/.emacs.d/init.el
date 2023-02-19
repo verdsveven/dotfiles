@@ -206,7 +206,6 @@
   (setq org-preview-latex-image-directory (concat (make-temp-file "ltx" t) "/"))
   (setq org-latex-compiler "lualatex")
   (setq org-export-with-smart-quotes t)
-  (require 'org-tempo)
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
