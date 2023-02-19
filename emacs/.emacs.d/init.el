@@ -293,6 +293,11 @@
 	  (:maildir "/Trash"     :key  ?t)
 	  (:maildir "/Drafts"    :key  ?d))))
 
+;;; org-mime
+(use-package org-mime
+  :init (add-hook 'after-init-hook (lambda () (require 'org-mime)))
+  :after mu4e)
+
 ;;; Custom functions
 (defun latexmk-compile()
   (interactive) (async-shell-command (concat "latexmk -pdf -cd --shell-escape -lualatex " (buffer-file-name))))
