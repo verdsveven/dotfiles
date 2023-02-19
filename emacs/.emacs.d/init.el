@@ -210,6 +210,7 @@
    'org-babel-load-languages
    '((emacs-lisp . t)
      (python . t)
+     (org . t)
      (jupyter . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
   (defun org-summary-todo (n-done n-not-done)
