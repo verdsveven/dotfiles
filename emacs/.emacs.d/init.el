@@ -273,6 +273,19 @@
 
 (use-package rainbow-mode)
 
+;;; mu4e
+(use-package mu4e
+  :load-path "/usr/share/emacs/site-lisp/mu4e"
+  :init (add-hook 'after-init-hook (lambda () (require 'mu4e)))
+  :config
+  (setq mu4e-change-filenames-when-moving t)
+  (setq mu4e-get-mail-command "mbsync -a")
+  ;; folders
+  (setq mu4e-drafts-folder "/Drafts")
+  (setq mu4e-sent-folder "/Sent")
+  (setq mu4e-archive-folder "/Archive")
+  (setq mu4e-trash-folder "/Trash"))
+
 ;;; Custom functions
 (defun latexmk-compile()
   (interactive) (async-shell-command (concat "latexmk -pdf -cd --shell-escape -lualatex " (buffer-file-name))))
