@@ -79,7 +79,7 @@
   (evil-set-undo-system 'undo-tree))
 (use-package evil-collection :after evil :init (evil-collection-init))
 
-(use-package all-the-icons)
+(use-package nerd-icons)
 (use-package doom-modeline
   :defer nil
   :config
