@@ -6,7 +6,7 @@ wal -R &
 ( cd $HOME/.dwm/ && dwmblocks) &
 
 # Some other declarations:
-amixer set Master 0 &
+amixer -q set Master 0 &
 xsetroot -cursor_name left_ptr &
 
 # Launch scripts:
