@@ -37,3 +37,6 @@ super + n
 # Launch editor in term or visual editor
 super + {e, v}
 	cd && {$TERM $EDITOR, sh -c "$VISUAL"}
+
+super + w
+      notify-send "$(curl "wttr.in/$(cat $HOME/.config/locations | dmenu)?0?T?M")"
