@@ -194,6 +194,7 @@
   (setq org-agenda-window-setup 'only-window)
   (setq org-habit-graph-column 48)
   (setq org-log-done 'time)
+  (setq org-tags-column 0)
   (setq org-ellipsis "↴")
   (setq org-capture-templates
 	'(("t" "Todo" entry (file+headline org-inbox-location "Tasks") "* TODO %?")
