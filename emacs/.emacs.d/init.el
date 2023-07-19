@@ -288,6 +288,10 @@
 (use-package citar
   :config
   (citar-org-roam-mode)
+  :bind (("C-c r o" . citar-open)
+	 ("C-c r f" . citar-open-files)
+	 ("C-c r e" . citar-open-entry)
+	 ("C-c r i" . citar-insert-citation))
   :custom
   (citar-org-roam-subdir "reference")
   (citar-bibliography '("~/Documents/Resources/references.bib"))
