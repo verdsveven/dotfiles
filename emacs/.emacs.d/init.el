@@ -284,6 +284,19 @@
   (setq bibtex-autokey-names 3)
   (setq doi-utils-async-download nil))
 
+(use-package citar
+  :config
+  (citar-org-roam-mode)
+  :custom
+  (citar-org-roam-subdir "reference")
+  (citar-bibliography '("~/Documents/Resources/references.bib"))
+  (citar-library-paths '("~/Documents/Resources/Papers/" "~/Documents/Resources/Textbooks/")))
+
+(use-package citar-org-roam
+  :after org-roam citar
+  :config
+  (setq citar-org-roam-capture-template-key "r"))
+
 (use-package anki-editor :init (setq anki-editor-use-math-jax t))
 
 (use-package magit)
