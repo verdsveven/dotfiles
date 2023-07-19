@@ -132,6 +132,7 @@
   :init
   (add-hook 'TeX-mode-hook (lambda () (local-set-key [f5] 'TeX-command-run-all)))
   (setq
+   TeX-parse-self t
    TeX-source-correlate-mode 'synctex
    TeX-view-program-selection (quote ((output-pdf "Zathura")))
    TeX-engine 'luatex
