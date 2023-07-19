@@ -270,6 +270,16 @@
   :after org-roam
   :config (org-roam-timestamps-mode))
 
+(use-package org-ref
+  :init (add-hook 'after-init-hook (lambda () (require 'org-ref)))
+  :config
+  (setq bibtex-completion-bibliography '("~/Documents/Resources/references.bib"))
+  (setq bibtex-completion-library-path '("~/Documents/Resources/Papers/" "~/Documents/Resources/Textbooks/" "~/Documents/Resources/Books/"))
+  (setq bibtex-autokey-year-length 4)
+  (setq bibtex-autokey-titleword-length 15)
+  (setq bibtex-autokey-names 3)
+  (setq doi-utils-async-download nil))
+
 (use-package anki-editor :init (setq anki-editor-use-math-jax t))
 
 (use-package magit)
