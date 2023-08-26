@@ -316,6 +316,14 @@
 
 (use-package rainbow-mode)
 
+(use-package elfeed
+  :config
+  (setq elfeed-use-curl t)
+  (setq elfeed-feeds (list (list "fever+https://lukasz@news.lukasz-m.com" :api-url "https://news.lukasz-m.com/fever/" :use-authinfo t)))
+  (elfeed-protocol-enable))
+
+(use-package elfeed-protocol)
+
 ;;; mu4e
 (use-package mu4e
   :load-path "/usr/share/emacs/site-lisp/mu4e"
