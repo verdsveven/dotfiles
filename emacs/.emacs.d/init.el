@@ -152,6 +152,8 @@
   (add-to-list 'cdlatex-command-alist '("norm" "Insert norm" "\\left\\lVert ? \\right\\rVert" cdlatex-position-cursor nil nil t))
   (add-to-list 'cdlatex-command-alist '("abs" "Insert absolute value" "\\left\\lvert ? \\right\\rvert" cdlatex-position-cursor nil nil t))
   (add-to-list 'cdlatex-command-alist '("pmat" "Insert pmatrix env" "\\begin{pmatrix} ? \\end{pmatrix}" cdlatex-position-cursor nil nil t))
+  (add-to-list 'cdlatex-math-symbol-alist '(84 ("\\intercal" "\\dagger")))
+  (add-to-list 'cdlatex-math-symbol-alist '(42 ("\\times" "\\ast")))
   )
 
 (use-package recentf :config (add-hook 'after-init-hook (recentf-mode 1)))
