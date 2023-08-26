@@ -202,7 +202,7 @@
 	  ("r" "Reading list" entry (file+headline org-inbox-location "Tasks") "* TODO Read: %?")
 	  ("i" "Idea" entry (file+headline org-inbox-location "Ideas") "* %?")
 	  ("l" "Link" entry (file+headline org-inbox-location "Links") "* [[%x][%?]]")
-	  ("j" "Journal" entry (file+olp+datetree org-journal-location "Personal") "* %?\nEntered on %U")))
+	  ("j" "Journal" entry (file+olp+datetree org-journal-location "Personal") "* Entered on %U in %?")))
   (setq org-todo-keywords
 	'((sequence "TODO(t)" "NEXT(n)" "OPEN(o)" "|" "DONE(d)" "CANCELLED(c)")))
   (setq org-log-into-drawer t)
