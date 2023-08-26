@@ -184,7 +184,7 @@
   (setq org-cycle-include-plain-lists 'integrate)
   (setq org-directory "~/org")
   (setq org-inbox-location (org-file-path "inbox.org"))
-  (setq org-journal-location (org-file-path "journal.org"))
+  (setq org-journal-location (org-file-path "journal.org.gpg"))
   (setq org-archive-location (concat (org-file-path "archive.org_archive") "::* From %s"))
   (setq org-agenda-files '("~/org"))
   (setq org-agenda-skip-deadline-prewarning-if-scheduled 'pre-scheduled)
