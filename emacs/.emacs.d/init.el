@@ -79,6 +79,10 @@
   (evil-set-undo-system 'undo-tree))
 (use-package evil-collection :after evil :init (evil-collection-init))
 
+(use-package evil-surround
+  :after evil
+  :init (global-evil-surround-mode 1))
+
 (use-package nerd-icons)
 (use-package doom-modeline
   :defer nil
