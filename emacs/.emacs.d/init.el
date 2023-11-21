@@ -318,7 +318,7 @@
 (use-package elfeed
   :config
   (setq elfeed-use-curl t)
-  (setq elfeed-feeds (list (list "fever+https://lukasz@news.lukasz-m.com" :api-url "https://news.lukasz-m.com/fever/" :use-authinfo t)))
+  (setq elfeed-protocol-feeds (list (list "fever+https://lukasz@news.lukasz-m.com" :api-url "https://news.lukasz-m.com/fever/" :use-authinfo t)))
   (elfeed-protocol-enable))
 
 (use-package elfeed-protocol)
