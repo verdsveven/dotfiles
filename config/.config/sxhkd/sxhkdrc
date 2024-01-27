@@ -14,6 +14,12 @@ super + Escape
 XF86AudioPlay
 	playerctl play-pause
 
+XF86AudioNext
+	playerctl next
+
+XF86AudioPrev
+	playerctl previous
+
 # Brightness controls
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
 	light -{A,U} 5 && pkill -RTMIN+11 dwmblocks
