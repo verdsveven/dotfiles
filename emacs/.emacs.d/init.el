@@ -302,7 +302,9 @@
   :bind (("C-c r o" . citar-open)
 	 ("C-c r f" . citar-open-files)
 	 ("C-c r e" . citar-open-entry)
-	 ("C-c r i" . citar-insert-citation))
+	 ("C-c r n" . citar-open-notes)
+	 ("C-c r i" . citar-insert-citation)
+	 ("C-c r a" . citar-org-roam-ref-add))
   :custom
   (citar-org-roam-subdir "reference")
   (citar-bibliography '("~/Documents/Resources/references.bib"))
