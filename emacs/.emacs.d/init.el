@@ -116,6 +116,9 @@
               ("M-DEL" . vertico-directory-delete-word))
   :hook (rfn-eshadow-update-overlay . vertico-directory-tidy))
 
+(use-package marginalia
+  :init (marginalia-mode))
+
 (use-package orderless
   :init
   (setq completion-styles '(orderless flex)
