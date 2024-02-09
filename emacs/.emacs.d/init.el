@@ -122,6 +122,7 @@
 (use-package orderless
   :init
   (setq completion-styles '(orderless flex)
+        completion-ignore-case t
         completion-category-defaults nil
         completion-category-overrides '((file (styles partial-completion)))
 	orderless-matching-styles '(orderless-flex)))
