@@ -161,6 +161,7 @@
   (add-to-list 'cdlatex-command-alist '("pmat" "Insert pmatrix env" "\\begin{pmatrix} ? \\end{pmatrix}" cdlatex-position-cursor nil nil t))
   (add-to-list 'cdlatex-math-symbol-alist '(84 ("\\intercal" "\\dagger")))
   (add-to-list 'cdlatex-math-symbol-alist '(42 ("\\times" "\\ast")))
+  (add-to-list 'cdlatex-math-modify-alist '(115 "\\boldsymbol" nil t nil nil))
   )
 
 (use-package recentf :config (add-hook 'after-init-hook (recentf-mode 1)))
