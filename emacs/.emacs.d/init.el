@@ -211,6 +211,7 @@
   (setq org-cycle-separator-lines -1)
   (setq org-cycle-include-plain-lists 'integrate)
   (setq org-directory "~/org")
+  (setq org-workouts-location (org-file-path "workouts.org"))
   (setq org-inbox-location (org-file-path "inbox.org"))
   (setq org-journal-location (org-file-path "journal.org.gpg"))
   (setq org-archive-location (concat (org-file-path "archive.org_archive") "::* From %s"))
@@ -229,6 +230,7 @@
 	  ("r" "Reading list" entry (file+headline org-inbox-location "Tasks") "* TODO Read: %?")
 	  ("i" "Idea" entry (file+headline org-inbox-location "Ideas") "* %?")
 	  ("l" "Link" entry (file+headline org-inbox-location "Links") "* [[%x][%?]]")
+	  ("w" "Workout" entry (file+olp+datetree org-workouts-location "Workouts") "* Workout logged on %U:\n%?")
 	  ("j" "Journal" entry (file+olp+datetree org-journal-location "Personal") "* Entered on %U in %?")))
   (setq org-todo-keywords
 	'((sequence "TODO(t)" "NEXT(n)" "OPEN(o)" "|" "DONE(d)" "CANCELLED(c)")))
