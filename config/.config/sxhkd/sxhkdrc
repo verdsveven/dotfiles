@@ -46,3 +46,6 @@ super + {e, v}
 
 super + w
       notify-send "$(curl "wttr.in/$(cat $HOME/.config/locations | dmenu)?0?T?M")"
+
+XF86Messenger
+	dunstctl set-paused toggle && pkill -RTMIN+9 dwmblocks
