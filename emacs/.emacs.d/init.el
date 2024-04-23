@@ -287,6 +287,9 @@
   (require 'org-roam-dailies)
   (org-roam-db-autosync-mode)
   (require 'org-roam-protocol)
+  (setq org-roam-node-display-template
+        (concat "${title:*} "
+                (propertize "${tags:10}" 'face 'org-tag)))
   (add-to-list 'org-roam-capture-templates
 	       '("r" "reference" plain "%?" :target
 		(file+head "%(expand-file-name (or citar-org-roam-subdir \"\") org-roam-directory)/${citar-citekey}.org" "#+title: ${citar-citekey} (${citar-date}). ${note-title}.")
