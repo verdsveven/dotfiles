@@ -4,6 +4,10 @@ network(){
 	nmcli -f NAME c show --active | sed -n 2p | awk '{$1=$1};1'
 }
 
+notif(){
+	dunstctl is-paused | sed "s/false/on/g;s/true/off/g"
+}
+
 bat(){
 	cap=`cat /sys/class/power_supply/BAT0/capacity`
 	stat=`cat /sys/class/power_supply/BAT0/status`
