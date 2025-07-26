@@ -239,7 +239,8 @@
   (setq org-agenda-skip-scheduled-delay-if-deadline 'post-deadline)
   (setq org-agenda-window-setup 'only-window)
   (setq org-habit-graph-column 48)
-  (setq org-log-done 'time)
+  (setq org-log-reschedule 'time)
+  (setq org-log-redeadline 'time)
   (setq org-tags-column 0)
   (setq org-ellipsis "↴")
   (setq org-capture-templates
@@ -250,7 +251,7 @@
 	  ("w" "Workout" entry (file+olp+datetree org-workouts-location "Workouts") "* Workout logged on %U:\n%?")
 	  ("j" "Journal" entry (file+olp+datetree org-journal-location "Personal") "* Entered on %U in %?")))
   (setq org-todo-keywords
-	'((sequence "TODO(t)" "NEXT(n)" "OPEN(o)" "|" "DONE(d)" "CANCELLED(c)")))
+	'((sequence "TODO(t)" "NEXT(n)" "OPEN(o!)" "|" "DONE(d!)" "CANCELLED(c!)")))
   (setq org-log-into-drawer t)
   (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
   (setq org-refile-use-outline-path 'file)
