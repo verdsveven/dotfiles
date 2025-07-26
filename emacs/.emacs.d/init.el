@@ -257,9 +257,10 @@
   (setq org-outline-path-complete-in-steps nil)
   (setq org-summary-num 0)
   (setq org-preview-latex-default-process 'dvisvgm)
-  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
+  (setq org-format-latex-options (plist-put org-format-latex-options :scale 2.5))
   (setq org-preview-latex-image-directory (concat (make-temp-file "ltx" t) "/"))
   (setq org-latex-compiler "lualatex")
+  (delete '("" "fontspec" t ("lualatex" "xetex")) org-latex-default-packages-alist)
   (setq org-export-with-smart-quotes t)
   (org-babel-do-load-languages
    'org-babel-load-languages
