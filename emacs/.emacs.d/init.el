@@ -366,6 +366,10 @@
 
 (use-package rainbow-mode)
 
+(use-package olivetti
+  :config
+  (add-hook 'olivetti-mode-hook '(lambda () (display-line-numbers-mode 'toggle) (hide-mode-line-mode))))
+
 (use-package elfeed
   :config
   (setq elfeed-use-curl t)
