@@ -199,19 +199,20 @@
 
 (use-package recentf :config (add-hook 'after-init-hook (recentf-mode 1)))
 (use-package page-break-lines)
+
 (use-package dashboard
   :defer nil
   :config
   (dashboard-setup-startup-hook)
   (setq
-   initial-buffer-choice (lambda () (get-buffer "*dashboard*"))
+   initial-buffer-choice (lambda () (get-buffer-create dashboard-buffer-name))
    dashboard-set-navigator t
    dashboard-set-heading-icons t
    dashboard-startup-banner 'logo
    dashboard-center-content t
    dashboard-items
    '(
-     (recents  . 3)
+     (recents  . 6)
      (bookmarks . 3))))
 
 ;;; Org
