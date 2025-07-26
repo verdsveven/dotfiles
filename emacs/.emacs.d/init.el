@@ -368,6 +368,7 @@
 
 (use-package rainbow-mode)
 
+(use-package hide-mode-line)
 (use-package olivetti
   :config
   (add-hook 'olivetti-mode-hook '(lambda () (display-line-numbers-mode 'toggle) (hide-mode-line-mode))))
