@@ -330,10 +330,11 @@
   :init (add-hook 'after-init-hook (lambda () (require 'org-ref)))
   :config
   (setq bibtex-completion-bibliography '("~/Documents/Resources/references.bib"))
-  (setq bibtex-completion-library-path '("~/Documents/Resources/Papers/" "~/Documents/Resources/Textbooks/" "~/Documents/Resources/Books/"))
+  (setq bibtex-completion-library-path '("~/Documents/Resources/Papers/" "~/Documents/Resources/Textbooks/" "~/Documents/Resources/Books/" "~/Documents/Resources/LectureNotes"))
   (setq bibtex-autokey-year-length 4)
   (setq bibtex-autokey-titleword-length 15)
   (setq bibtex-autokey-names 3)
+  (setq doi-utils-download-pdf nil)
   (setq doi-utils-async-download nil))
 
 (use-package citar
@@ -348,11 +349,12 @@
   :custom
   (citar-org-roam-subdir "reference")
   (citar-bibliography '("~/Documents/Resources/references.bib"))
-  (citar-library-paths '("~/Documents/Resources/Papers/" "~/Documents/Resources/Textbooks/")))
+  (citar-library-paths '("~/Documents/Resources/Papers/" "~/Documents/Resources/Textbooks/" "~/Documents/Resources/Books/" "~/Documents/Resources/LectureNotes")))
 
 (use-package citar-org-roam
   :after org-roam citar
   :config
+  (setq citar-org-roam-note-title-template "${author:%etal} :: ${title}")
   (setq citar-org-roam-capture-template-key "r"))
 
 (use-package anki-editor :init (setq anki-editor-use-math-jax t))
